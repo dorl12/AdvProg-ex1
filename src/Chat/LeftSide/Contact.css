@@ -1,0 +1,21 @@
+.friend-drawer {
+    /*   */
+    padding: 10px 15px;
+    display: flex;
+    vertical-align: baseline;
+    background: gold;
+    transition: .3s ease;
+    border-radius: 7px;
+}
+
+ 
+.time {
+    color: grey;
+    float: right;
+  }
+
+.friend-drawer:hover{
+    background: rgb(0, 204, 255);
+    cursor: pointer;
+}
+  

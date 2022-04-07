@@ -1,0 +1,41 @@
+.chat-panel{
+    
+    color: white;
+    width: 830px ;
+    height: 745px;
+    overflow-y: auto;
+    overflow-x:hidden;
+}
+
+.chat-bubble {
+    padding: 10px 14px;
+    background: darkcyan;
+    margin: 10px 30px;
+    border-radius: 9px;
+}
+
+.chat-bubble--left {
+
+    left: 0;
+    border-right-color: #eee;
+    border-left: 0;
+    margin-left: -20px;
+
+}
+
+.chat-bubble--right {
+
+    right: 0;
+    border-left-color: darkcyan;
+    border-right: 0;
+    margin-right: -20px;
+}
+.offset-md-9 {
+      color: white;
+    
+  }
+
+  .row  {
+   margin-left: 7px;
+   margin-right: 7px;
+  }
