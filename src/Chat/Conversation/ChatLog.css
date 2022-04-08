@@ -2,7 +2,7 @@
     
     color: white;
     width: 830px ;
-    height: 745px;
+    height: 680px;
     overflow-y: auto;
     overflow-x:hidden;
 }
@@ -39,3 +39,18 @@
    margin-left: 7px;
    margin-right: 7px;
   }
+
+  .friend-top {
+    width: 830px;
+    padding: 10px 15px;
+    display:inline-flex;
+    vertical-align: baseline;
+    background: rgb(236, 230, 230);
+    transition: .3s ease;
+    border-radius: 7px;
+}
+
+.input-wrapper{
+    background-color: darkgray;
+    margin-top: 10px;
+}

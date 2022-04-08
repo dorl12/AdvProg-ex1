@@ -1,17 +1,17 @@
 .friend-drawer {
-    /*   */
+    
     padding: 10px 15px;
-    display: flex;
+    display:inline-flex;
     vertical-align: baseline;
-    background: gold;
+    background: rgb(236, 230, 230);
     transition: .3s ease;
     border-radius: 7px;
 }
 
  
 .time {
+    margin-left: 100px;
     color: grey;
-    float: right;
   }
 
 .friend-drawer:hover{
