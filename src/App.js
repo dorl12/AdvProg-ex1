@@ -1,5 +1,6 @@
 import './App.css';
 import React, { Component, StrictMode } from 'react';
+import {Tab} from 'react-bootstrap';
 import ChatBox from './Chat/ChatBox.js';
 import NavTop from './NavTop';
 

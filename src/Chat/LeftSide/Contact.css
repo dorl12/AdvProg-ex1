@@ -1,5 +1,5 @@
 .friend-drawer {
-    
+    width: 381px;
     padding: 10px 15px;
     display:inline-flex;
     vertical-align: baseline;
@@ -8,9 +8,10 @@
     border-radius: 7px;
 }
 
- 
+ .text-muted {
+     width: 275px;
+ }
 .time {
-    margin-left: 100px;
     color: grey;
   }
 
