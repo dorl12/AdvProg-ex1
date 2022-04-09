@@ -9,7 +9,7 @@ function ChatBox() {
     return (
         <div className="container">
             <div className="row">
-                <div class="col-4">
+                <div className="col-4">
                     <LeftSide />
                 </div>
                 <div className="col-8">
