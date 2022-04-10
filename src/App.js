@@ -18,7 +18,7 @@ function App() {
           <Routes>
             <Route path="/chat" element={<ChatBox /> }></Route>
           </Routes>
-        </BrowserRouter>z
+        </BrowserRouter>
       </div>
     </div>
 

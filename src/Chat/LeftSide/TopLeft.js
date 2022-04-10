@@ -1,15 +1,47 @@
+import { useState,useRef} from 'react';
+import { Modal, Button, Form } from 'react-bootstrap';
 import './TopLeft.css';
 
 function TopLeft() {
+  const userRef = useRef();
+  const [show, setShow] = useState(false);
+  const modelOpen = () => {
+    setShow(!show);
+  };
+function handleSubmit(e) {
+  e.preventDefault()
+
+}
+
+
+
+
   return (
     <div className="top-left">
+      <Modal show={show}>
+        <Modal.Dialog>
+          <Modal.Header>
+            <Modal.Title>Add Contact</Modal.Title>
+          </Modal.Header>
+
+          <Modal.Body>
+            <Form onSubmit={handleSubmit}></Form>
+            <Form.Control type="text" ref={userRef} required />
+          </Modal.Body>
+
+          <Modal.Footer>
+            <Button onClick={modelOpen} variant="dark">Close</Button>
+            <Button type="submit">Create Chat</Button>
+          </Modal.Footer>
+        </Modal.Dialog>
+      </Modal>
       <div>
-        <span><img className="profile-image" src={'person1.jpg  '} alt="Profile img"></img></span>
-        <span className='username'>My name</span>
+        <span><img className="profile-image" src={'person1.jpg'} alt="Profile img"></img></span>
+        <span className='username'>Natasha</span>
         <span className="settings-tray--right">
         </span>
         <span className="add-button">
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-person-plus-fill" viewBox="0 0 16 16">
+          <svg onClick={modelOpen} xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-person-plus-fill" viewBox="0 0 16 16">
             <path d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
             <path fillRule="evenodd" d="M13.5 5a.5.5 0 0 1 .5.5V7h1.5a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0V8h-1.5a.5.5 0 0 1 0-1H13V5.5a.5.5 0 0 1 .5-.5z" />
           </svg>

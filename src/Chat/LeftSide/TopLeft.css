@@ -1,4 +1,7 @@
-
+.username {
+    font-weight: bold;
+    margin-left: 10px;
+}
 .search {
     margin-top: 3px;
         background: #fafafa;
