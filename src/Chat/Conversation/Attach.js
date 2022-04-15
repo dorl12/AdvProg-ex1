@@ -6,7 +6,6 @@ import { useEffect, useState } from 'react';
 
 
 function Attach(props) {
-    // const [refreshEnter, setRefreshEnter] = useState(false)
     var inputVal = ''
     function getInputValue() {
         inputVal = document.getElementById("myInput").value;
@@ -15,7 +14,6 @@ function Attach(props) {
     function sendMsg() {
         getInputValue();
         if (inputVal == '') {
-            //console.log(dataBaseChat[0].chat);
             return;
         }
         var newChat = props.log;

@@ -9,17 +9,18 @@ import { dataBaseChat} from './hooks/Storage.js';
 function ChatBox() {
 
     const [refresh, setRefresh] = useState(false);
-    const [userSelect, setUserSelect] = useState('');
+    
     const [selectedChat, setSelectedChat] = useState(dataBaseChat[0].chat);
+    const [userSelect, setUserSelect] = useState(0);
 
     return (
         <div className="container">
             <div className="row">
                 <div className="col-4">
-                    <LeftSide choose={setSelectedChat} />
+                    <LeftSide choose={setSelectedChat} setTop={setUserSelect} />
                 </div>
                 <div className="col-8">
-                    <TopConv />
+                    <TopConv setTop={userSelect}/>
                     <ChatLog log={selectedChat} />
                     <Attach log={selectedChat} setter={setSelectedChat} bool={refresh} setbool={setRefresh} />
                 </div>

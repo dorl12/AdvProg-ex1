@@ -4,3 +4,7 @@
     overflow-y: scroll;
     background: rgb(207, 191, 191);
 }
+
+.friend-drawer:focus {
+    background: rgb(0, 204, 255);
+}
