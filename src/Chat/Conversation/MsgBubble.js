@@ -1,8 +1,8 @@
 function MsgBubble(props) {
 const bubbleSide = props.side ? 'chat-bubble--right' : 'chat-bubble--left';
 const offset = props.side ? ' offset-md-9' : '';
-const msg = props.message;
-
+const msg = props.contain;
+const type = props.type;
 
     return (
         <div className="row no-gutters">

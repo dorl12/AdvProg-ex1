@@ -1,35 +1,21 @@
 import './ChatLog.css';
 import MsgBubble from './MsgBubble';
-function ChatLog() {
+import { chat12, displayChat} from '../hooks/Storage.js';
+import { useEffect, useState } from 'react';
 
-    var chat1 = [
-        { side: true, message: 'Hey motek!' },
-        { side: false, message: 'Wazzup?' },
-        { side: true, message: 'Great' },
-        { side: true, message: 'how are you?' },
-        { side: false, message: 'amazing' },
-    ];
+var chat1;
 
-
-
-    const displayChat = chat1.map((msg, key) => {
-        return <MsgBubble {...msg} key={key} />
-        
-    });
+function ChatLog(props) {
 
 
     return (
         <div className="chat-panel">
-            {displayChat};
-            
+            {props.log.map((msg, key) => {
+                return <MsgBubble {...msg} key={key} />
+                
+            })};
         </div>
     )
 }
 
 export default ChatLog;
-
-// <MsgBubble side={true} message='Hey motek!' />
-// <MsgBubble side={false} message='Wazzup?' />
-// <MsgBubble side={true} message='Great' />
-// <MsgBubble side={true} message='how are you?' />
-// <MsgBubble side={false} message='amazing' />

@@ -1,4 +1,4 @@
-import { useState,useRef} from 'react';
+import { useState, useRef } from 'react';
 import { Modal, Button, Form } from 'react-bootstrap';
 import './TopLeft.css';
 
@@ -8,32 +8,27 @@ function TopLeft() {
   const modelOpen = () => {
     setShow(!show);
   };
-function handleSubmit(e) {
-  e.preventDefault()
-
-}
-
-
-
+  function handleSubmit(e) {
+    console.log(userRef.current.value)
+    e.preventDefault()
+    //createContact(userRef.current.value)
+    modelOpen()
+  }
 
   return (
     <div className="top-left">
       <Modal show={show}>
-        <Modal.Dialog>
-          <Modal.Header>
-            <Modal.Title>Add Contact</Modal.Title>
-          </Modal.Header>
 
-          <Modal.Body>
-            <Form onSubmit={handleSubmit}></Form>
+        <Modal.Header>
+          <Modal.Title>Create Contact</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <Form onSubmit={handleSubmit}>
             <Form.Control type="text" ref={userRef} required />
-          </Modal.Body>
-
-          <Modal.Footer>
+            <Button type="submit">Create</Button>
             <Button onClick={modelOpen} variant="dark">Close</Button>
-            <Button type="submit">Create Chat</Button>
-          </Modal.Footer>
-        </Modal.Dialog>
+          </Form>
+        </Modal.Body>
       </Modal>
       <div>
         <span><img className="profile-image" src={'person1.jpg'} alt="Profile img"></img></span>
