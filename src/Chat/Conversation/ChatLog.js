@@ -13,7 +13,7 @@ function ChatLog(props) {
             {props.log.map((msg, key) => {
                 return <MsgBubble {...msg} key={key} />
                 
-            })};
+            })}
         </div>
     )
 }

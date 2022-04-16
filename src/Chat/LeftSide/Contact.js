@@ -11,13 +11,13 @@ function Contact(props) {
     const [name, setName] = useState(props.name)
 
     function handleClick() {
-        props.choose(dataBaseChat[props.id].chat)
+        props.choose(props.dataBase[props.id].chat)
         props.setTop(props.id)
     }
 
 
     return (
-        <div className="friend-drawer" tabindex={props.id} onClick={handleClick}>
+        <div className="friend-drawer" tabIndex={props.id} onClick={handleClick}>
             <span> <img className="profile-image" src={userPic} alt=""></img></span>
             <span>
                 <div className="text">

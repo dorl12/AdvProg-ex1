@@ -1,16 +1,43 @@
 import { useState, useRef } from 'react';
 import { Modal, Button, Form } from 'react-bootstrap';
 import './TopLeft.css';
+import { contacts } from '../hooks/Storage.js'
 
-function TopLeft() {
+
+function TopLeft(props) {
   const userRef = useRef();
   const [show, setShow] = useState(false);
   const modelOpen = () => {
     setShow(!show);
   };
+
+function createChatlog(name) {
+  var newChat = {
+    sender : name,
+    chat : []
+  }
+
+  props.addChat([...props.dataBase, newChat]);
+}
+
+function createContact(name) {
+  
+var newContact = {id : props.contactList.length,
+  name : name,
+  img : 'default.jpg',
+  displayName : name,
+  status : 'Hey!'}
+
+  props.addContact([...props.contactList, newContact]);
+}
+
   function handleSubmit(e) {
-    console.log(userRef.current.value)
-    e.preventDefault()
+    e.preventDefault();
+    console.log(userRef.current.value);
+    createContact(userRef.current.value);
+    createChatlog(userRef.current.value);
+    console.log(props.contactList)
+    
     //createContact(userRef.current.value)
     modelOpen()
   }

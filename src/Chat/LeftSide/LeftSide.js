@@ -15,14 +15,22 @@ function LeftSide(props) {
     //     {id : 5,name : 'Linda', img : 'person7.jpeg', displayName : 'Linda', status : 'I\'m high as fuck'}
     // ];
 
-    const contactList = contacts.map((contact, key) => {
-        return <Contact {...contact} key={key} choose={props.choose} setTop={props.setTop} />
+    // const contactList = contacts.map((contact, key) => {
+    //     return <Contact {...contact} key={key} choose={props.choose} setTop={props.setTop} />
+    // });
+
+    const contactList = props.contactList.map((contact, key) => {
+        return <Contact {...contact} key={key} 
+        choose={props.choose} setTop={props.setTop}
+        dataBase={props.dataBase} setDataBase={props.addChat} />
     });
+
 
     return (
         <div className="left-side">
             <div className="left-side-top">
-                <TopLeft />
+                <TopLeft contactList={props.contactList} addContact={props.addContact}
+                dataBase={props.dataBase} addChat={props.addChat} />
             </div>
             <div className="left-side-contacts">
 
