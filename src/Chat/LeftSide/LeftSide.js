@@ -2,35 +2,41 @@ import Contact from "./Contact";
 import TopLeft from "./TopLeft";
 import './LeftSide.css';
 import { ListGroup } from "react-bootstrap";
-import { contacts } from '../hooks/Storage.js'
+import { useState } from "react";
 
 function LeftSide(props) {
+    
+    // const contactList = props.contactList.map((contact, key) => {
+    //     return <Contact {...contact} key={key} 
+    //     choose={props.choose} setTop={props.setTop}
+    //     dataBase={props.dataBase} setDataBase={props.addChat} />
+    // });
+    //var hold = contac
 
-    // var contacts = [
-    //     {id : 0, name : 'Hadar Pinto', img : 'person2.jpg', displayName : 'Hadar Pinto', status : 'Hey! I\'m using ChatBOX'},
-    //     {id : 1, name : 'Hadaros Pintomos', img : 'person3.jpeg', displayName : 'Hadaros Pintomos', status : 'Heyos Muchachos'},
-    //     {id : 2,name : 'Katz Vegarjuba', img : 'person4.png', displayName : 'Katz Vegarjuba', status : 'YOLO'},
-    //     {id : 3,name : 'Dark Bianca', img : 'person5.jpg', displayName : 'Dark Bianca', status : 'Be careful what you wish for'},
-    //     {id : 4,name : 'Shimi Hey', img : 'person6.webp', displayName : 'Shimi Hey', status : 'Swalala'},
-    //     {id : 5,name : 'Linda', img : 'person7.jpeg', displayName : 'Linda', status : 'I\'m high as fuck'}
-    // ];
+    
 
-    // const contactList = contacts.map((contact, key) => {
-    //     return <Contact {...contact} key={key} choose={props.choose} setTop={props.setTop} />
+
+    // const contactList = props.contactResult.map((contact, key) => {
+    //     return <Contact {...contact} key={key} 
+    //     choose={props.choose} setTop={props.setTop}
+    //     dataBase={props.dataBase} setDataBase={props.addChat} />
     // });
 
-    const contactList = props.contactList.map((contact, key) => {
+    const contactList = props.contactResult.map((contact, key) => {
         return <Contact {...contact} key={key} 
         choose={props.choose} setTop={props.setTop}
         dataBase={props.dataBase} setDataBase={props.addChat} />
     });
+    console.log('i am here')
+    console.log(props.contactResult)
 
 
     return (
         <div className="left-side">
             <div className="left-side-top">
                 <TopLeft contactList={props.contactList} addContact={props.addContact}
-                dataBase={props.dataBase} addChat={props.addChat} />
+                dataBase={props.dataBase} addChat={props.addChat}
+                doSearch={props.doSearch} refresh={props.refresh} setRefresh={props.setRefresh} />
             </div>
             <div className="left-side-contacts">
 

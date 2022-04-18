@@ -18,7 +18,7 @@ function Attach(props) {
         }
         var newChat = props.log;
         newChat.push({ side: true, type: 'text', contain: inputVal })
-        props.setter(newChat);
+        props.setLog(newChat);
         if (props.bool === false) {
             props.setbool(true)
         }

@@ -12,7 +12,15 @@ function ChatBox() {
     const [userSelect, setUserSelect] = useState(0);
     const [contactList, setContactList] = useState(contacts);
     const [dataBase, setDataBase] = useState(dataBaseChat);
-    const [selectedChat, setSelectedChat] = useState(dataBase[0].chat);
+    const [selectedChat, setSelectedChat] = useState(dataBase[0].chat); 
+
+    const [contactResult, setContactResult] = useState(contactList);
+
+    const doSearch = function(query){
+        setContactResult(contactList.filter((contact) => contact.name.includes(query)));
+    }
+
+
 
     return (
         <div className="container">
@@ -20,12 +28,14 @@ function ChatBox() {
                 <div className="col-4">
                     <LeftSide choose={setSelectedChat} setTop={setUserSelect}
                      contactList={contactList} addContact={setContactList}
-                     dataBase={dataBase} addChat={setDataBase} />
+                     dataBase={dataBase} addChat={setDataBase}
+                     doSearch={doSearch} contactResult={contactResult}
+                     refresh={refresh} setRefresh={setRefresh} />
                 </div>
                 <div className="col-8">
                     <TopConv setTop={userSelect} contactList={contactList} />
                     <ChatLog log={selectedChat} />
-                    <Attach log={selectedChat} setter={setSelectedChat} bool={refresh} setbool={setRefresh} />
+                    <Attach log={selectedChat} setLog={setSelectedChat} bool={refresh} setbool={setRefresh} />
                 </div>
             </div>
         </div>

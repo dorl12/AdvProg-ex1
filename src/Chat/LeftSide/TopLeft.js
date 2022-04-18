@@ -1,46 +1,59 @@
 import { useState, useRef } from 'react';
 import { Modal, Button, Form } from 'react-bootstrap';
+import Search from './Search';
 import './TopLeft.css';
-import { contacts } from '../hooks/Storage.js'
+import './Search.js';
 
 
 function TopLeft(props) {
   const userRef = useRef();
   const [show, setShow] = useState(false);
+
+  function refresh() {
+    if(props.refresh == true) {
+      props.setRefresh(false);
+    }
+    else {
+      props.setRefresh(true);
+    }
+  }
+
   const modelOpen = () => {
     setShow(!show);
   };
 
-function createChatlog(name) {
-  var newChat = {
-    sender : name,
-    chat : []
+  function createChatlog(name) {
+    var newChat = {
+      sender: name,
+      chat: []
+    }
+
+    props.addChat([...props.dataBase, newChat]);
   }
 
-  props.addChat([...props.dataBase, newChat]);
-}
+  function createContact(name) {
 
-function createContact(name) {
-  
-var newContact = {id : props.contactList.length,
-  name : name,
-  img : 'default.jpg',
-  displayName : name,
-  status : 'Hey!'}
+    var newContact = {
+      id: props.contactList.length,
+      name: name,
+      img: 'default.jpg',
+      displayName: name,
+      status: 'Hey!'
+    }
 
-  props.addContact([...props.contactList, newContact]);
-}
+    props.addContact([...props.contactList, newContact]);
+    refresh();
+
+  }
 
   function handleSubmit(e) {
     e.preventDefault();
-    console.log(userRef.current.value);
     createContact(userRef.current.value);
     createChatlog(userRef.current.value);
-    console.log(props.contactList)
-    
-    //createContact(userRef.current.value)
     modelOpen()
   }
+
+
 
   return (
     <div className="top-left">
@@ -70,14 +83,7 @@ var newContact = {id : props.contactList.length,
         </span>
       </div>
       <div className='search'>
-        <span>
-          <input placeholder="Search here" type="text" size='37'></input>
-        </span>
-        <span className='search-img'>
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-search" viewBox="0 0 16 16">
-            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"></path>
-          </svg>
-        </span>
+        <Search doSearch={props.doSearch} />
       </div>
     </div>
   )
