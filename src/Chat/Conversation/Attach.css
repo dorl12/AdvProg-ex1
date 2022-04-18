@@ -1,5 +1,4 @@
-.friend-drawer {
-    width: 381px;
+.icon-send {
     padding: 10px 15px;
     display:inline-flex;
     vertical-align: baseline;
@@ -8,20 +7,6 @@
     border-radius: 7px;
 }
 
- .text-muted {
-     width: 275px;
- }
-.time {
-    color: grey;
-  }
-
-.friend-drawer:hover{
-    background: rgb(0, 204, 255);
+.icon-send:hover {
     cursor: pointer;
 }
-
-
-
-
-
-  

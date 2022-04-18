@@ -1,5 +1,10 @@
 .left-side-contacts{
-    width: 420px;
-    height: 730px;
+    width: 402px;
+    height: 680px;
     overflow-y: scroll;
+    background: rgb(207, 191, 191);
+}
+
+.friend-drawer:focus {
+    background: rgb(0, 204, 255);
 }

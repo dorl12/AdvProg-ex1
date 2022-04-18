@@ -1,11 +1,14 @@
 
-function TopConv() {
+
+function TopConv(props) {
+    var user = props.contactList[props.setTop]
     return (
-        <div class="settings-tray">
-            <div class="friend-drawer no-gutters friend-drawer--grey">
-                <img class="profile-image" src={'person2.jpg'} alt=""></img>
-                    <div class="text">
-                        <h6>Hadar Pinto</h6>
+        <div className="settings-tray">
+            <div className="friend-top">
+                <img className="profile-image" src={user.img} alt=""></img>
+                    <div className="text">
+                        <h6>{user.displayName}</h6>
+                        <span>{user.status}</span>
                     </div>
             </div>
         </div>

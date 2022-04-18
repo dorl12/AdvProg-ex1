@@ -1,98 +1,19 @@
 import './ChatLog.css';
-function ChatLog() {
+import MsgBubble from './MsgBubble';
+import { chat12, displayChat} from '../hooks/Storage.js';
+import { useEffect, useState } from 'react';
+
+var chat1;
+
+function ChatLog(props) {
+
+
     return (
-        <div class="chat-panel">
-            <div class="row no-gutters">
-                <div class="col-md-3">
-                    <div class="chat-bubble chat-bubble--left">
-                        Hello dude!
-                    </div>
-                </div>
-            </div>
-            <div class="row no-gutters">
-                <div class="col-md-3 offset-md-9">
-                    <div class="chat-bubble chat-bubble--right">
-                        Hello dude!
-                    </div>
-                </div>
-            </div>
-            <div class="row no-gutters">
-                <div class="col-md-3 offset-md-9">
-                    <div class="chat-bubble chat-bubble--right">
-                        Hello dude!
-                    </div>
-                </div>
-            </div>
-            <div class="row no-gutters">
-                <div class="col-md-3">
-                    <div class="chat-bubble chat-bubble--left">
-                        Hello dude!
-                    </div>
-                </div>
-            </div>
-            <div class="row no-gutters">
-                <div class="col-md-3">
-                    <div class="chat-bubble chat-bubble--left">
-                        Hello dude!
-                    </div>
-                </div>
-            </div>
-            <div class="row no-gutters">
-                <div class="col-md-3">
-                    <div class="chat-bubble chat-bubble--left">
-                        Hello dude!
-                    </div>
-                </div>
-            </div>
-            <div class="row no-gutters">
-                <div class="col-md-3 offset-md-9">
-                    <div class="chat-bubble chat-bubble--right">
-                        Hello dude!
-                    </div>
-                </div>
-            </div>
-            <div class="row no-gutters">
-            <div class="col-md-3 offset-md-9">
-                <div class="chat-bubble chat-bubble--right">
-                    Hello dude!
-                </div>
-            </div>
-        </div>
-        <div class="row no-gutters">
-        <div class="col-md-3 offset-md-9">
-            <div class="chat-bubble chat-bubble--right">
-                Hello dude!
-            </div>
-        </div>
-    </div>
-    <div class="row no-gutters">
-    <div class="col-md-3 offset-md-9">
-        <div class="chat-bubble chat-bubble--right">
-            Hello dude!
-        </div>
-    </div>
-</div>
-<div class="row no-gutters">
-<div class="col-md-3 offset-md-9">
-    <div class="chat-bubble chat-bubble--right">
-        Hello dude!
-    </div>
-</div>
-</div>
-<div class="row no-gutters">
-<div class="col-md-3 offset-md-9">
-    <div class="chat-bubble chat-bubble--right">
-        Hello dude!
-    </div>
-</div>
-</div>
-<div class="row no-gutters">
-<div class="col-md-3 offset-md-9">
-    <div class="chat-bubble chat-bubble--right">
-        Hello dude!
-    </div>
-</div>
-</div>
+        <div className="chat-panel">
+            {props.log.map((msg, key) => {
+                return <MsgBubble {...msg} key={key} />
+                
+            })}
         </div>
     )
 }
