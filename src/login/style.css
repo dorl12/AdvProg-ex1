@@ -2,7 +2,6 @@
     background-position: 100%;
     width: 100%;
     height: 725px;
-    background-color: gray;
     align-items: center;
 }
 
@@ -11,13 +10,11 @@
     background-position: 100%;
     width: 100%;
     height: 200px;
-    background-color: green;
 }
 
 .content {
     background-color: azure;
-    margin-right: 150px;
-    margin-left: 150px;
+    margin-top: 5px;
     display: flex;
     flex-direction: column;
     align-items: center;

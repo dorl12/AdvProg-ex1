@@ -7,32 +7,31 @@ import NavTop from './NavTop';
 import $ from "jquery";
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
-
 function App() {
-  // let [state, setState] = useState(false);
-  // if(state==true){
-  //   return <ChatBox></ChatBox>
-  // }else{
-  //   return <Login func={setState}></Login>
-  // }
+  let [login, setLogin] = useState(false);
+  if (login == true) {
+    return <ChatBox></ChatBox>
+  } else {
+    return <Login registered={setLogin}></Login>
+  }
   return (
+    <div>
       <div>
-        <div>
-          <NavTop />
-        </div>
-        <div>
-          <BrowserRouter>
-            <Routes>
-              <Route path="/chat" element={<ChatBox />}></Route>
-            </Routes>
-            <Routes>
-              <Route path="/login" element={<Login />}></Route>
-            </Routes>
-          </BrowserRouter>
-        </div>
+        <NavTop />
       </div>
+      <div>
+        <BrowserRouter>
+          <Routes>
+            <Route path="/chat" element={<ChatBox />}></Route>
+          </Routes>
+          <Routes>
+            <Route path="/login" element={<Login func={setLogin} />}></Route>
+          </Routes>
+        </BrowserRouter>
+      </div>
+    </div>
 
-    );
+  );
 }
 
 export default App;
