@@ -1,3 +1,4 @@
+import React from 'react';
 function MsgBubble(props) {
 const bubbleSide = props.side ? 'chat-bubble--right' : 'chat-bubble--left';
 const offset = props.side ? ' offset-md-9' : '';

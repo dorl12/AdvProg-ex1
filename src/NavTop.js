@@ -1,3 +1,4 @@
+import React from 'react';
 function NavTop() {
     return(
         <nav className="navbar sticky-top navbar-expand-lg navbar-light bg-light">

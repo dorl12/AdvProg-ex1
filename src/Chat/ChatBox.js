@@ -1,3 +1,4 @@
+import React from 'react';
 import Attach from './Conversation/Attach';
 import './ChatBox.css';
 import './LeftSide/LeftSide.js';
@@ -13,14 +14,11 @@ function ChatBox() {
     const [contactList, setContactList] = useState(contacts);
     const [dataBase, setDataBase] = useState(dataBaseChat);
     const [selectedChat, setSelectedChat] = useState(dataBase[0].chat); 
-
     const [contactResult, setContactResult] = useState(contactList);
 
     const doSearch = function(query){
         setContactResult(contactList.filter((contact) => contact.name.includes(query)));
     }
-
-
 
     return (
         <div className="container">
