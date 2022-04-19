@@ -1,3 +1,4 @@
+import React from 'react';
 import { useState, useRef } from 'react';
 import { Modal, Button, Form } from 'react-bootstrap';
 import Search from './Search';

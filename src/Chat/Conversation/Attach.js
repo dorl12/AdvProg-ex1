@@ -1,3 +1,4 @@
+import React from 'react';
 import './Attach.css';
 import { dataBaseChat } from '../hooks/Storage.js';
 import { useEffect, useState } from 'react';
