@@ -1,3 +1,4 @@
+import React from 'react';
 import Contact from "./Contact";
 import TopLeft from "./TopLeft";
 import './LeftSide.css';

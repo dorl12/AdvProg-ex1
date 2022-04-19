@@ -1,3 +1,4 @@
+import React from 'react';
 import Attach from './Conversation/Attach';
 import './ChatBox.css';
 import './LeftSide/LeftSide.js';

@@ -1,9 +1,9 @@
 import React, { useRef, useState } from "react";
  import loginImg from './loginImg.jpg'
  import './style.css';
- import { users } from '../users.js'
+ import { users } from './users.js'
 
- function Login(){
+ function Login(func){
     const [userList, setUserList] = useState(users);
      const handle = ()=> {
             var userName = document.getElementById("username").value;

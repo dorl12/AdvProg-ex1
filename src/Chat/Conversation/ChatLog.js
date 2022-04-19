@@ -1,3 +1,4 @@
+import React from 'react';
 import './ChatLog.css';
 import MsgBubble from './MsgBubble';
 import { chat12, displayChat} from '../hooks/Storage.js';

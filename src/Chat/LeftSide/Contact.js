@@ -1,3 +1,4 @@
+import React from 'react';
 import { useState } from 'react';
 import './Contact.css';
 import { dataBaseChat } from '../hooks/Storage.js';
