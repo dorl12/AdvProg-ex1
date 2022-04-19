@@ -9,6 +9,9 @@ function Contact(props) {
         props.setTop(props.id)
     }
 
+    var index = props.dataBase[props.id].chat.length;
+    var lastMessage = props.dataBase[props.id].chat[index-1].contain;
+
 
     return (
         <div className="friend-drawer" tabIndex={props.id} onClick={handleClick}>
@@ -16,10 +19,10 @@ function Contact(props) {
             <span>
                 <div className="text">
                     <h6>{props.displayName}</h6>
-                    <p className="text-muted">{props.status}</p>
+                    <p className="text-muted">{lastMessage}</p>
                 </div>
             </span>
-            <span className="time text-muted small">{props.time}</span>
+            <p className="text-muted">{props.time}</p>
         </div>
     )
 }
