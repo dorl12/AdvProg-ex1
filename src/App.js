@@ -8,11 +8,11 @@ import $ from "jquery";
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 function App() {
-  let [login, setLogin] = useState(false);
-  if (login == true) {
+  let [state, setState] = useState(false);
+  if (state == true) {
     return <ChatBox></ChatBox>
   } else {
-    return <Login registered={setLogin}></Login>
+    return <Login registered={setState}></Login>
   }
   return (
     <div>
@@ -25,7 +25,7 @@ function App() {
             <Route path="/chat" element={<ChatBox />}></Route>
           </Routes>
           <Routes>
-            <Route path="/login" element={<Login func={setLogin} />}></Route>
+            <Route path="/login" element={<Login func={setState} />}></Route>
           </Routes>
         </BrowserRouter>
       </div>

@@ -17,28 +17,28 @@ function Login({ registered }) {
 
     return (
         <div className="container">
-            <div className="row">
-                <div className="col"></div>
-                <div className="col-7">
-                    {register ? <Register registered={registered}></Register> :
-                        <div className="content">
-                            <div className="form">
-                                <div className="form-group">
-                                    <label htmlFor="userName">Username</label>
-                                    <input type="text" name="username" placeholder="username" id="username" />
-                                </div>
-                                <div className="form-group">
-                                    <label htmlFor="password">Password</label>
-                                    <input type="password" nameName="password" placeholder="password" id="password" />
-                                </div>
+            <div class="screen">
+                {register ? <Register registered={registered}></Register> :
+                    <div className="content">
+                        <form className="form-login">
+                            <div className="form-group">
+                            <i className="login_icon fas fa-lock"></i>
+                                <label htmlFor="userName">Username</label>
+                                <input type="text" name="username" placeholder="username" id="username" />
                             </div>
-                            <div className="footer">
-                                <button type="button" className="btn" onClick={handle}>Login</button>
+                            <div className="form-group">
+                            <i className="login_icon fas fa-lock"></i>
+                                <label htmlFor="password">Password</label>
+                                <input type="password" nameName="password" placeholder="password" id="password" />
                             </div>
-                            <span>Not Registered? <a href="#" className="link-primary" onClick={() => { setRegister(true) }}>Click here</a> to register</span>
-                        </div>}
-                </div>
-                <div className="col"></div>
+                        </form>
+                        <button className="button login">
+                        </button>
+                        <div className="footer">
+                            <button type="button" className="btn" onClick={handle}>Login</button>
+                        </div>
+                        <span>Not Registered? <a href="#" className="link-primary" onClick={() => { setRegister(true) }}>Click here</a> to register</span>
+                    </div>}
             </div>
         </div>
     );

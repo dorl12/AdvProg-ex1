@@ -47,12 +47,12 @@ function Register({ registered }) {
             if (fileReader.readyState === 2) setImage(fileReader.result);
         }
         fileReader.readAsDataURL(e.target.files[0]);
-        console.log('image',image);
+        //console.log('image',image);
     } 
 
     return (
         <div className="content">
-            <div className="form">
+            <div className="form-register">
                 <div className="form-group">
                     <label htmlFor="userName">Username</label>
                     <input type="text" name="username" placeholder="username" id="username" />
