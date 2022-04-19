@@ -2,11 +2,15 @@ import React from 'react';
 import { useState, useRef } from 'react';
 import { Modal, Button, Form } from 'react-bootstrap';
 import Search from './Search';
+import { users } from '../../login/users.js'
 import './TopLeft.css';
 import './Search.js';
 
 
 function TopLeft(props) {
+  console.log(users);
+  var userName = props.currentUser[0].name;
+  var img = props.currentUser[0].profilePic;
   const userRef = useRef();
   const [show, setShow] = useState(false);
 
@@ -72,8 +76,8 @@ function TopLeft(props) {
         </Modal.Body>
       </Modal>
       <div>
-        <span><img className="profile-image" src={'person1.jpg'} alt="Profile img"></img></span>
-        <span className='username'>Natasha</span>
+        <span><img className="profile-image" src={img} alt="Profile img"></img></span>
+        <span className='username'>{userName}</span>
         <span className="settings-tray--right">
         </span>
         <span className="add-button">

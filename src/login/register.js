@@ -3,7 +3,7 @@ import loginImg from './loginImg.jpg'
 import './style.css';
 import { users } from './users.js'
 
-function Register({ registered }) {
+function Register({ registered, setCurrentUser}) {
     let [notes, setNotes] = useState("");
     let [image, setImage] = useState("");
 
@@ -14,7 +14,8 @@ function Register({ registered }) {
         var nickName = document.getElementById("nickName").value;
         if (validate(userName, password, passValidation, nickName)) {
             users.push({ name: userName, pass: password, nickName: nickName, profilePic: image });
-            console.log(users);
+            setCurrentUser([{name: userName, pass: password, nickName: nickName, profilePic: image}])
+            // console.log(users);
             registered(true);
         }
     }

@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import loginImg from './loginImg.jpg'
 import './style.css';
 import { users } from './users.js'
-import Register from './Register.js'
+import Register from './register.js'
 
-function Login({ registered }) {
+function Login({ registered, setCurrentUser }) {
     let [register, setRegister] = useState(false);
 
     const handle = () => {
@@ -20,7 +20,7 @@ function Login({ registered }) {
             <div className="row">
                 <div className="col"></div>
                 <div className="col-7">
-                    {register ? <Register registered={registered}></Register> :
+                    {register ? <Register registered={registered} setCurrentUser={setCurrentUser}></Register> :
                         <div className="content">
                             <div className="form">
                                 <div className="form-group">

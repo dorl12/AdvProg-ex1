@@ -19,7 +19,8 @@ function LeftSide(props) {
             <div className="left-side-top">
                 <TopLeft contactList={props.contactList} addContact={props.addContact}
                 dataBase={props.dataBase} addChat={props.addChat}
-                doSearch={props.doSearch} refresh={props.refresh} setRefresh={props.setRefresh} />
+                doSearch={props.doSearch} refresh={props.refresh} setRefresh={props.setRefresh}
+                currentUser={props.currentUser} />
             </div>
             <div className="left-side-contacts">
 
