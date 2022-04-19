@@ -4,27 +4,32 @@ export var dataBaseChat = [
             {
                 side: true,
                 type: 'text',
-                contain: 'Hey motek!'
+                contain: 'Hey motek!',
+                time: ''
             },
             {
                 side: false,
                 type: 'text',
-                contain: 'Wazzup?'
+                contain: 'Wazzup?',
+                time: ''
             },
             {
                 side: true,
                 type: 'text',
-                contain: 'Great'
+                contain: 'Great',
+                time: ''
             },
             {
                 side: true,
                 type: 'text',
-                contain: 'how are you?'
+                contain: 'how are you?',
+                time: ''
             },
             {
                 side: false,
                 type: 'text',
-                contain: 'amazing'
+                contain: 'amazing',
+                time: ''
             }
         ]
     },
@@ -34,27 +39,32 @@ export var dataBaseChat = [
             {
                 side: true,
                 type: 'text',
-                contain: 'aaaaaaaaa'
+                contain: 'aaaaaaaaa',
+                time: ''
             },
             {
                 side: false,
                 type: 'text',
-                contain: 'aaaaaaaa'
+                contain: 'aaaaaaaa',
+                time: ''
             },
             {
                 side: true,
                 type: 'text',
-                contain: 'aaaaaaaaaa'
+                contain: 'aaaaaaaaaa',
+                time: ''
             },
             {
                 side: true,
                 type: 'text',
-                contain: 'aaaaaaaaa'
+                contain: 'aaaaaaaaa',
+                time: ''
             },
             {
                 side: false,
                 type: 'text',
-                contain: 'aaaaaaaaaaa'
+                contain: 'aaaaaaaaaaa',
+                time: ''
             }
         ]
     },
@@ -64,27 +74,32 @@ export var dataBaseChat = [
             {
                 side: true,
                 type: 'text',
-                contain: 'bbbbbbbbbbbbb'
+                contain: 'bbbbbbbbbbbbb',
+                time: ''
             },
             {
                 side: false,
                 type: 'text',
-                contain: 'bbbbbbbbbbbb?'
+                contain: 'bbbbbbbbbbbb?',
+                time: ''
             },
             {
                 side: true,
                 type: 'text',
-                contain: 'bbbbbbbbbbbbb'
+                contain: 'bbbbbbbbbbbbb',
+                time: ''
             },
             {
                 side: true,
                 type: 'text',
-                contain: 'bbbbbbbbbbbbbb'
+                contain: 'bbbbbbbbbbbbbb',
+                time: ''
             },
             {
                 side: false,
                 type: 'text',
-                contain: 'bbbbbbbbbbb'
+                contain: 'bbbbbbbbbbb',
+                time: ''
             }
         ]
     },
@@ -94,27 +109,32 @@ export var dataBaseChat = [
             {
                 side: true,
                 type: 'text',
-                contain: 'cccccccccccc'
+                contain: 'cccccccccccc',
+                time: ''
             },
             {
                 side: false,
                 type: 'text',
-                contain: 'ccccccccccccccc'
+                contain: 'ccccccccccccccc',
+                time: ''
             },
             {
                 side: true,
                 type: 'text',
-                contain: 'ccccccccccc'
+                contain: 'ccccccccccc',
+                time: ''
             },
             {
                 side: true,
                 type: 'text',
-                contain: 'ccccccccccc?'
+                contain: 'ccccccccccc?',
+                time: ''
             },
             {
                 side: false,
                 type: 'text',
-                contain: 'ccccccccc'
+                contain: 'ccccccccc',
+                time: ''
             }
         ]
     },
@@ -124,27 +144,32 @@ export var dataBaseChat = [
             {
                 side: true,
                 type: 'text',
-                contain: 'dddddddddd'
+                contain: 'dddddddddd',
+                time: ''
             },
             {
                 side: false,
                 type: 'text',
-                contain: 'ddddddddddddd'
+                contain: 'ddddddddddddd',
+                time: ''
             },
             {
                 side: true,
                 type: 'text',
-                contain: 'dddddddddddd'
+                contain: 'dddddddddddd',
+                time: ''
             },
             {
                 side: true,
                 type: 'text',
-                contain: 'ddddddddddd'
+                contain: 'ddddddddddd',
+                time: ''
             },
             {
                 side: false,
                 type: 'text',
-                contain: 'dddddddddddd'
+                contain: 'dddddddddddd',
+                time: ''
             }
         ]
     },
@@ -154,27 +179,32 @@ export var dataBaseChat = [
             {
                 side: true,
                 type: 'text',
-                contain: 'wowwww'
+                contain: 'wowwww',
+                time: ''
             },
             {
                 side: false,
                 type: 'text',
-                contain: 'wowwww?'
+                contain: 'wowwww?',
+                time: ''
             },
             {
                 side: true,
                 type: 'text',
-                contain: 'wowwww'
+                contain: 'wowwww',
+                time: ''
             },
             {
                 side: true,
                 type: 'text',
-                contain: 'wowwww?'
+                contain: 'wowwww?',
+                time: ''
             },
             {
                 side: false,
                 type: 'text',
-                contain: 'wowwww'
+                contain: 'wowwww',
+                time: ''
             }
         ]
     },
@@ -182,11 +212,11 @@ export var dataBaseChat = [
 ]
 
 export var contacts = [
-    {id : 0, name : 'Hadar Pinto', img : 'person2.jpg', displayName : 'Hadar Pinto', status : 'Hey! I\'m using ChatBOX'},
-    {id : 1, name : 'Hadaros Pintomos', img : 'person3.jpeg', displayName : 'Hadaros Pintomos', status : 'Heyos Muchachos'},
-    {id : 2, name : 'Katz Vegarjuba', img : 'person4.png', displayName : 'Katz Vegarjuba', status : 'YOLO'},
-    {id : 3, name : 'Dark Bianca', img : 'person5.jpg', displayName : 'Dark Bianca', status : 'Be careful what you wish for'},
-    {id : 4, name : 'Shimi Hey', img : 'person6.webp', displayName : 'Shimi Hey', status : 'Swalala'},
-    {id : 5, name : 'Linda', img : 'person7.jpeg', displayName : 'Linda', status : 'I\'m high as fuck'}
+    {id : 0, name : 'Hadar Pinto', img : 'person2.jpg', displayName : 'Hadar Pinto', status : 'Hey! I\'m using ChatBOX' , time : '13:21'},
+    {id : 1, name : 'Hadaros Pintomos', img : 'person3.jpeg', displayName : 'Hadaros Pintomos', status : 'Heyos Muchachos', time : '13:21'},
+    {id : 2, name : 'Katz Vegarjuba', img : 'person4.png', displayName : 'Katz Vegarjuba', status : 'YOLO', time : '13:21'},
+    {id : 3, name : 'Dark Bianca', img : 'person5.jpg', displayName : 'Dark Bianca', status : 'Be careful what you wish for', time : '13:21'},
+    {id : 4, name : 'Shimi Hey', img : 'person6.webp', displayName : 'Shimi Hey', status : 'Swalala', time : '13:21'},
+    {id : 5, name : 'Linda', img : 'person7.jpeg', displayName : 'Linda', status : 'I\'m high as fuck', time : '13:21'}
 ];
 
