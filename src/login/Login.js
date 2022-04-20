@@ -4,7 +4,7 @@ import './style.css';
 import { users } from './users.js'
 import Register from './Register.js'
 
-function Login({ registered }) {
+function Login({ registered, setCurrentUser }) {
     let [register, setRegister] = useState(false);
 
     const handle = () => {
@@ -12,12 +12,14 @@ function Login({ registered }) {
         var password = document.getElementById("password").value;
         if (users.findIndex((user) => { return user.name == userName && user.pass == password }) !== (-1)) {
             registered(true);
+            setCurrentUser(userName);
         }
+
     }
 
     return (
         <div className="container">
-            <div class="screen">
+            <div className="screen">
                 {register ? <Register registered={registered}></Register> :
                     <div className="content">
                         <form className="form-login">
@@ -29,7 +31,7 @@ function Login({ registered }) {
                             <div className="form-group">
                             <i className="login_icon fas fa-lock"></i>
                                 <label htmlFor="password">Password</label>
-                                <input type="password" nameName="password" placeholder="password" id="password" />
+                                <input type="password" namename="password" placeholder="password" id="password" />
                             </div>
                         </form>
                         <button className="button login">

@@ -1,7 +1,7 @@
 import React from 'react';
 
 function TopConv(props) {
-    var user = props.contactList[props.setTop]
+    var user = props.contactList[0]
     return (
         <div className="settings-tray">
             <div className="friend-top">

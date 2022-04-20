@@ -7,11 +7,18 @@ import { useState } from "react";
 
 function LeftSide(props) {
 
+    // const contactList = props.contactResult.map((contact, key) => {
+    //     return <Contact {...contact} key={key} 
+    //     choose={props.choose} setTop={props.setTop}
+    //     dataBase={props.dataBase} setDataBase={props.addChat} />
+    // });
+
     const contactList = props.contactResult.map((contact, key) => {
         return <Contact {...contact} key={key} 
-        choose={props.choose} setTop={props.setTop}
+        choose={props.choose} 
         dataBase={props.dataBase} setDataBase={props.addChat} />
     });
+
 
 
     return (

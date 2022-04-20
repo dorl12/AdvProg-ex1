@@ -6,8 +6,8 @@ import { dataBaseChat } from '../hooks/Storage.js';
 
 function Contact(props) {
     function handleClick() {
-        props.choose(props.dataBase[props.id].chat)
-        props.setTop(props.id)
+        props.choose(props.dataBase[props.id].chat);
+        //props.setTop(props.id);
     }
 
     var index = props.dataBase[props.id].chat.length;

@@ -7,7 +7,7 @@ export var users = [
     image: 'default.jpg'
 },
 {
-    name: 'dor',
+    name: 'Hadar',
     pass: '1',
     nickName: 'dorl12',
     image: 'default.jpg'
