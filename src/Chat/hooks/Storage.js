@@ -212,7 +212,8 @@ export var dataBaseChat = [
 
 export var data = [
     {
-        name: 'avi',
+        name: 'Hadar',
+        contacts: ['Linda'],
         info: [
             {sender: 'Linda', chat: [
                 {
@@ -380,6 +381,15 @@ export var contacts = [
         img: 'person7.jpeg',
         displayName: 'Linda',
         status: 'I\'m high as fuck',
+        time: '13:21'
+    },
+    {
+        id: 6,
+        name: 'Hadar',
+        pass: '1',
+        img: 'person1.jpg',
+        displayName: 'Hadar',
+        status: 'dsa',
         time: '13:21'
     }
 ];
