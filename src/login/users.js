@@ -1,5 +1,21 @@
-export var users = [{
+
+export var users = [
+    {
     name: 'dor',
     pass: '1',
-    nickName: 'dorl12'
-}]
+    nickName: 'dorl12',
+    image: 'default.jpg'
+},
+{
+    name: 'dor',
+    pass: '1',
+    nickName: 'dorl12',
+    image: 'default.jpg'
+},
+
+
+
+
+]
+
+
