@@ -213,8 +213,8 @@ export var dataBaseChat = [
 export var data = [
     {
         name: 'avi',
-        info: {
-            sender: 'Linda', chat: [
+        info: [
+            {sender: 'Linda', chat: [
                 {
                     side: true,
                     type: 'text',
@@ -245,56 +245,95 @@ export var data = [
                     contain: 'wowwww',
                     time: ''
                 }
-            ]
-        }
+            ]}
+        ]
 
     },
     {
         name: 'dor',
-        info: {
-            sender: 'Linda', chat: [
-                {
-                    side: true,
-                    type: 'text',
-                    contain: 'wowwww',
-                    time: ''
-                },
-                {
-                    side: false,
-                    type: 'text',
-                    contain: 'wowwww?',
-                    time: ''
-                },
-                {
-                    side: true,
-                    type: 'text',
-                    contain: 'wowwww',
-                    time: ''
-                },
-                {
-                    side: true,
-                    type: 'text',
-                    contain: 'wowwww?',
-                    time: ''
-                },
-                {
-                    side: false,
-                    type: 'text',
-                    contain: 'wowwww',
-                    time: ''
-                }
-            ]
-        }
+        contacts: ['Linda', 'Shimi Hey'],
+        info: [
+            {
+                sender: 'Linda', chat: [
+                    {
+                        side: true,
+                        type: 'text',
+                        contain: 'wowwww',
+                        time: ''
+                    },
+                    {
+                        side: false,
+                        type: 'text',
+                        contain: 'wowwww?',
+                        time: ''
+                    },
+                    {
+                        side: true,
+                        type: 'text',
+                        contain: 'wowwww',
+                        time: ''
+                    },
+                    {
+                        side: true,
+                        type: 'text',
+                        contain: 'wowwww?',
+                        time: ''
+                    },
+                    {
+                        side: false,
+                        type: 'text',
+                        contain: 'wowwww',
+                        time: ''
+                    }
+                ]
+            },
+            {
+                sender: 'Shimi Hey', chat: [
+                    {
+                        side: true,
+                        type: 'text',
+                        contain: 'dddddddddd',
+                        time: ''
+                    },
+                    {
+                        side: false,
+                        type: 'text',
+                        contain: 'ddddddddddddd',
+                        time: ''
+                    },
+                    {
+                        side: true,
+                        type: 'text',
+                        contain: 'dddddddddddd',
+                        time: ''
+                    },
+                    {
+                        side: true,
+                        type: 'text',
+                        contain: 'ddddddddddd',
+                        time: ''
+                    },
+                    {
+                        side: false,
+                        type: 'text',
+                        contain: 'dddddddddddd',
+                        time: ''
+                    }
+                ]
+            },
+
+        ]
+
     }
 ]
 
 export var contacts = [
     {
         id: 0,
-        name: 'Hadar',
+        name: 'dor',
         pass: '1',
-        img: 'person2.jpg',
-        displayName: 'Hadar Pinto',
+        img: 'default.jpg',
+        displayName: 'dor',
         status: 'Hey! I\'m using ChatBOX',
         time: '13:21'
     },
