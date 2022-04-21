@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import loginImg from './loginImg.jpg'
+import Login from "./Login";
 import './style.css';
 import { users } from './users.js'
 
-function Register({ registered }) {
+function Register({ registered, setRegister }) {
     let [notes, setNotes] = useState("");
     let [image, setImage] = useState("");
 
@@ -47,7 +47,7 @@ function Register({ registered }) {
             if (fileReader.readyState === 2) setImage(fileReader.result);
         }
         fileReader.readAsDataURL(e.target.files[0]);
-    } 
+    }
 
     return (
         <div className="content">
@@ -76,6 +76,9 @@ function Register({ registered }) {
             <div className="notes"><p>{notes}</p></div>
             <div className="footer">
                 <button type="button" className="btn" onClick={handle}>Register</button>
+            </div>
+            <div className="backToLoginScreen">
+                <span>Already Registered? <a href="#" className="link-primary" onClick={() => (setRegister(false))}>Click here</a> to login</span>
             </div>
         </div>
     );
