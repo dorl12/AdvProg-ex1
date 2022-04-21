@@ -1,5 +1,4 @@
 import React from 'react';
-import { useState } from 'react';
 import './Contact.css';
 
 function Contact(props) {
@@ -10,16 +9,19 @@ function Contact(props) {
 
         }
     }
-    
     function handleClick() {
         props.choose(props.dataBase[i].chat);
-        // props.setTop(props.id);
+        props.setCurrentActiveUserChat(props.displayName);
     }
 
     var index = props.dataBase[i].chat.length;
-    var lastMessage = props.dataBase[i].chat[index-1].contain;
-    console.log(lastMessage);
 
+    try{
+    var lastMessage = props.dataBase[i].chat[index-1].contain;
+    var lastMessageTime = props.dataBase[i].chat[index-1].time;
+    } catch {
+        lastMessage = 'Start a Conversation!';
+    }
 
     return (
         <div className="friend-drawer" tabIndex='0' onClick={handleClick}>
@@ -30,7 +32,7 @@ function Contact(props) {
                     <p className="text-muted">{lastMessage}</p>
                 </div>
             </span>
-            <p className="text-muted">{props.time}</p>
+            <p className="text-muted">{lastMessageTime}</p>
         </div>
     )
 }

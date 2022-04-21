@@ -16,7 +16,8 @@ function ChatBox(props) {
     const [dataBase, setDataBase] = useState(data[indexData].info);
     const [selectedChat, setSelectedChat] = useState(data[indexData].info[0].chat);
     const [contactResult, setContactResult] = useState(contactList);
-    const [currentUser, setCurrentUser] = useState(contacts[indexContacts])
+    const [currentUser, setCurrentUser] = useState(contacts[indexContacts]);
+    const [currentActiveUserChat, setCurrentActiveUserChat] = useState(contacts[indexContacts].displayName);
 
     if (contactList.length < 1) {
         for (let i = 0; i < data[indexData].contacts.length; i++) {
@@ -40,10 +41,11 @@ function ChatBox(props) {
                         contactList={contactList} addContact={setContactList}
                         dataBase={dataBase} setDataBase={setDataBase}
                         doSearch={doSearch} contactResult={contactResult}
-                        refresh={refresh} setRefresh={setRefresh} />
+                        refresh={refresh} setRefresh={setRefresh}
+                        setCurrentActiveUserChat={setCurrentActiveUserChat} />
                 </div>
                 <div className="col-8">
-                    <TopConv contactList={contactList} />
+                    <TopConv contactList={contactList} currentActiveUserChat={currentActiveUserChat} />
                     <ChatLog log={selectedChat} />
                     <Attach log={selectedChat} setLog={setSelectedChat} bool={refresh} setbool={setRefresh} />
                 </div>
