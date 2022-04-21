@@ -47,7 +47,6 @@ function Register({ registered }) {
             if (fileReader.readyState === 2) setImage(fileReader.result);
         }
         fileReader.readAsDataURL(e.target.files[0]);
-        //console.log('image',image);
     } 
 
     return (
@@ -62,8 +61,8 @@ function Register({ registered }) {
                     <input type="password" name="password" placeholder="password" id="password" />
                 </div>
                 <div className="form-group">
-                    <label htmlFor="passwordValidation">PasswordValidation</label>
-                    <input type="password" name="passwordValidation" placeholder="passwordValidation" id="passwordValidation" />
+                    <label htmlFor="passwordValidation">Confirm Password</label>
+                    <input type="password" name="passwordValidation" placeholder="Confirm Password" id="passwordValidation" />
                 </div>
                 <div className="form-group">
                     <label htmlFor="nickName">NickName</label>

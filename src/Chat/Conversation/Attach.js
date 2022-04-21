@@ -2,12 +2,12 @@ import React from 'react';
 import './Attach.css';
 import { dataBaseChat } from '../hooks/Storage.js';
 import { useEffect, useState } from 'react';
-
-
-
+import { Collapse } from 'react-collapse';
 
 function Attach(props) {
-    var inputVal = ''
+
+    const [dropUp, setDropUp] = useState(false);
+    var inputVal = '';
     function getInputValue() {
         inputVal = document.getElementById("myInput").value;
     }
@@ -45,12 +45,17 @@ function Attach(props) {
         <div className='input-wrapper'>
             <div className="input-group mb-3 dropup">
                 <button className="btn btn-outline-secondary"
-                    type="button" id="button-addon1" size='40'>
+                    type="button" id="button-addon1" size='40' onClick={() => setDropUp(!dropUp)} aria-controls="sendMenu" aria-expanded={dropUp}>
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                         fill="currentColor" className="bi bi-paperclip" viewBox="0 0 16 16">
                         <path d="M4.5 3a2.5 2.5 0 0 1 5 0v9a1.5 1.5 0 0 1-3 0V5a.5.5 0 0 1 1 0v7a.5.5 0 0 0 1 0V3a1.5 1.5 0 1 0-3 0v9a2.5 2.5 0 0 0 5 0V5a.5.5 0 0 1 1 0v7a3.5 3.5 0 1 1-7 0V3z"></path>
                     </svg>
                 </button>
+                <Collapse in={dropUp}>
+                    <div id="sendMenu">
+                        dor levy
+                    </div>
+                </Collapse>
                 <input type="text" className="form-control" placeholder="Enter Message"
                     onKeyDown={handleKey}
                     id='myInput'
