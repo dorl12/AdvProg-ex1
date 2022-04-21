@@ -10,7 +10,7 @@ const time = props.time
         <div className="row no-gutters">
             <div className={"col-md-3" + offset}>
                 <div className={"chat-bubble " + bubbleSide}>
-                <div>{msg}</div>
+                {msg}
                 <div className='timebubble'>{time}</div>
                 </div>
             </div>

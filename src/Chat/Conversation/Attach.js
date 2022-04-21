@@ -2,12 +2,17 @@ import React from 'react';
 import './Attach.css';
 
 
-
-
 function Attach(props) {
-    var today = new Date();
-    var messageTime = today.getHours() + ':' + today.getMinutes();
-
+    //time
+    function addZero(i) {
+        if (i < 10) { i = "0" + i }
+        return i;
+    }
+    const d = new Date();
+    let h = addZero(d.getHours());
+    let m = addZero(d.getMinutes());
+    let messageTime = h + ":" + m;
+    //text message
     var inputVal = ''
     function getInputValue() {
         inputVal = document.getElementById("myInput").value;
@@ -19,8 +24,9 @@ function Attach(props) {
             return;
         }
         var newChat = props.log;
-        newChat.push({ side: true, type: 'text', contain: inputVal, time : messageTime })
+        newChat.push({ side: true, type: 'text', contain: inputVal, time: messageTime })
         props.setLog(newChat);
+        // to render chatbox outside
         if (props.bool === false) {
             props.setbool(true)
         }
@@ -30,6 +36,7 @@ function Attach(props) {
         document.getElementById("myInput").value = '';
     }
 
+    // sending by click or enter
     function handleClick() {
         sendMsg();
     }
