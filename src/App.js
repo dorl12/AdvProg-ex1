@@ -9,10 +9,11 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 function App() {
   let [state, setState] = useState(false);
+  let [currentUser, setCurrentUser] = useState('')
   if (state == true) {
-    return <ChatBox></ChatBox>
+    return <ChatBox currentUser={currentUser}></ChatBox>
   } else {
-    return <Login registered={setState}></Login>
+    return <Login registered={setState} setCurrentUser={setCurrentUser}></Login>
   }
   return (
     <div>

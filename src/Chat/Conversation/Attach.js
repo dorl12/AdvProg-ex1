@@ -1,12 +1,13 @@
 import React from 'react';
 import './Attach.css';
-import { dataBaseChat } from '../hooks/Storage.js';
-import { useEffect, useState } from 'react';
 
 
 
 
 function Attach(props) {
+    var today = new Date();
+    var messageTime = today.getHours() + ':' + today.getMinutes();
+
     var inputVal = ''
     function getInputValue() {
         inputVal = document.getElementById("myInput").value;
@@ -18,7 +19,7 @@ function Attach(props) {
             return;
         }
         var newChat = props.log;
-        newChat.push({ side: true, type: 'text', contain: inputVal })
+        newChat.push({ side: true, type: 'text', contain: inputVal, time : messageTime })
         props.setLog(newChat);
         if (props.bool === false) {
             props.setbool(true)
