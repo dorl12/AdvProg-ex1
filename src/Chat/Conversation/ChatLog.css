@@ -7,7 +7,7 @@
     overflow-x:hidden;
 }
 #chat-panel {
-    height: 700px;
+    height: 710px;
     overflow-y: auto;
   }
 
@@ -34,6 +34,8 @@
     background: darkcyan;
     margin: 10px 30px;
     border-radius: 9px;
+    max-width: 100% !important;
+    word-wrap: break-word;
 }
 
 .chat-bubble--left {

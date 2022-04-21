@@ -13,7 +13,6 @@ function TopConv(props) {
         j = contacts.findIndex((user) => { return user.displayName == props.currentActiveUserChat});
         user = contacts[j];
     }
-    console.log(props.currentActiveUserChat);
 
     return (
         <div className="settings-tray">
