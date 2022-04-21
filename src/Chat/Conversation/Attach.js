@@ -46,9 +46,6 @@ function Attach(props) {
             sendMsg();
         }
     }
-
-
-
     return (
         <div className='input-wrapper'>
             <div className="input-group mb-3 dropup">

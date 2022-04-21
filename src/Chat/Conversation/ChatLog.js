@@ -7,10 +7,14 @@ import { useEffect, useState } from 'react';
 var chat1;
 
 function ChatLog(props) {
-
-
+    const messages = document.getElementById('chat-panel');
+    function scrollToBottom() {
+        messages.scrollTop = messages.scrollHeight;
+      }
+      
+      scrollToBottom();
     return (
-        <div className="chat-panel">
+        <div className="chat-panel" id='chat-panel'>
             {props.log.map((msg, key) => {
                 return <MsgBubble {...msg} key={key} />
                 

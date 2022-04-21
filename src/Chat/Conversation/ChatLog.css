@@ -2,10 +2,15 @@
     
     color: white;
     width: 830px ;
-    height: 680px;
-    overflow-y: auto;
+    /* height: 680px;
+    overflow-y: auto; */
     overflow-x:hidden;
 }
+#chat-panel {
+    height: 700px;
+    overflow-y: auto;
+  }
+
 ::-webkit-scrollbar {
     width: 9px;
     height: 11px;
