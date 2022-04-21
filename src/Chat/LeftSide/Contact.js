@@ -12,6 +12,7 @@ function Contact(props) {
     function handleClick() {
         props.choose(props.dataBase[i].chat);
         props.setCurrentActiveUserChat(props.displayName);
+        props.setIsJustLoggedIn(false);
     }
 
     var index = props.dataBase[i].chat.length;

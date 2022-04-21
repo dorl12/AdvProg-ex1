@@ -58,8 +58,6 @@ function TopLeft(props) {
     modelOpen();
   }
 
-
-
   return (
     <div className="top-left">
       <Modal show={show}>

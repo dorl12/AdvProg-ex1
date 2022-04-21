@@ -17,7 +17,8 @@ function LeftSide(props) {
     const contactList = props.contactResult.map((contact, key) => {
         return <Contact {...contact} key={key} 
         choose={props.choose} setCurrentActiveUserChat={props.setCurrentActiveUserChat}
-        dataBase={props.dataBase} setDataBase={props.setDataBase} />
+        dataBase={props.dataBase} setDataBase={props.setDataBase}
+        setIsJustLoggedIn={props.setIsJustLoggedIn} />
     });
 
 
