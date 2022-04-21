@@ -9,6 +9,8 @@ import './Search.js';
 function TopLeft(props) {
   const userRef = useRef();
   const [show, setShow] = useState(false);
+  var nickName = props.currentUser.displayName;
+  var image = props.currentUser.img;
 
   function refresh() {
     if(props.refresh == true) {
@@ -29,7 +31,7 @@ function TopLeft(props) {
       chat: []
     }
 
-    props.addChat([...props.dataBase, newChat]);
+    props.setDataBase([...props.dataBase, newChat]);
   }
 
   function createContact(name) {
@@ -72,8 +74,8 @@ function TopLeft(props) {
         </Modal.Body>
       </Modal>
       <div>
-        <span><img className="profile-image" src={'person1.jpg'} alt="Profile img"></img></span>
-        <span className='username'>Natasha</span>
+        <span><img className="profile-image" src={image} alt="Profile img"></img></span>
+        <span className='username'>{nickName}</span>
         <span className="settings-tray--right">
         </span>
         <span className="add-button">

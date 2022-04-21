@@ -208,15 +208,207 @@ export var dataBaseChat = [
             }
         ]
     },
+]
 
+export var data = [
+    {
+        name: 'Hadar',
+        contacts: ['Linda'],
+        info: [
+            {sender: 'Linda', chat: [
+                {
+                    side: true,
+                    type: 'text',
+                    contain: 'wowwww',
+                    time: ''
+                },
+                {
+                    side: false,
+                    type: 'text',
+                    contain: 'wowwww?',
+                    time: ''
+                },
+                {
+                    side: true,
+                    type: 'text',
+                    contain: 'wowwww',
+                    time: ''
+                },
+                {
+                    side: true,
+                    type: 'text',
+                    contain: 'wowwww?',
+                    time: ''
+                },
+                {
+                    side: false,
+                    type: 'text',
+                    contain: 'wowwww',
+                    time: ''
+                }
+            ]}
+        ]
+
+    },
+    {
+        name: 'dor',
+        contacts: ['Linda', 'Shimi Hey'],
+        info: [
+            {
+                sender: 'Linda', chat: [
+                    {
+                        side: true,
+                        type: 'text',
+                        contain: 'wowwww',
+                        time: ''
+                    },
+                    {
+                        side: false,
+                        type: 'text',
+                        contain: 'wowwww?',
+                        time: ''
+                    },
+                    {
+                        side: true,
+                        type: 'text',
+                        contain: 'wowwww',
+                        time: ''
+                    },
+                    {
+                        side: true,
+                        type: 'text',
+                        contain: 'wowwww?',
+                        time: ''
+                    },
+                    {
+                        side: false,
+                        type: 'text',
+                        contain: 'wowwww',
+                        time: ''
+                    }
+                ]
+            },
+            {
+                sender: 'Shimi Hey', chat: [
+                    {
+                        side: true,
+                        type: 'text',
+                        contain: 'dddddddddd',
+                        time: ''
+                    },
+                    {
+                        side: false,
+                        type: 'text',
+                        contain: 'ddddddddddddd',
+                        time: ''
+                    },
+                    {
+                        side: true,
+                        type: 'text',
+                        contain: 'dddddddddddd',
+                        time: ''
+                    },
+                    {
+                        side: true,
+                        type: 'text',
+                        contain: 'ddddddddddd',
+                        time: ''
+                    },
+                    {
+                        side: false,
+                        type: 'text',
+                        contain: 'dddddddddddd',
+                        time: ''
+                    }
+                ]
+            },
+
+        ]
+
+    }
 ]
 
 export var contacts = [
-    {id : 0, name : 'Hadar Pinto', img : 'person2.jpg', displayName : 'Hadar Pinto', status : 'Hey! I\'m using ChatBOX' , time : '13:21'},
-    {id : 1, name : 'Hadaros Pintomos', img : 'person3.jpeg', displayName : 'Hadaros Pintomos', status : 'Heyos Muchachos', time : '13:21'},
-    {id : 2, name : 'Katz Vegarjuba', img : 'person4.png', displayName : 'Katz Vegarjuba', status : 'YOLO', time : '13:21'},
-    {id : 3, name : 'Dark Bianca', img : 'person5.jpg', displayName : 'Dark Bianca', status : 'Be careful what you wish for', time : '13:21'},
-    {id : 4, name : 'Shimi Hey', img : 'person6.webp', displayName : 'Shimi Hey', status : 'Swalala', time : '13:21'},
-    {id : 5, name : 'Linda', img : 'person7.jpeg', displayName : 'Linda', status : 'I\'m high as fuck', time : '13:21'}
+    {
+        id: 0,
+        name: 'dor',
+        pass: '1',
+        img: 'default.jpg',
+        displayName: 'dor',
+        status: 'Hey! I\'m using ChatBOX',
+        time: '13:21'
+    },
+    {
+        id: 1,
+        name: 'Hadaros Pintomos',
+        pass: '1',
+        img: 'person3.jpeg',
+        displayName: 'Hadaros Pintomos',
+        status: 'Heyos Muchachos',
+        time: '13:21'
+    },
+    {
+        id: 2,
+        name: 'Katz Vegarjuba',
+        pass: '1',
+        img: 'person4.png',
+        displayName: 'Katz Vegarjuba',
+        status: 'YOLO',
+        time: '13:21'
+    },
+    {
+        id: 3,
+        name: 'Dark Bianca',
+        pass: '1',
+        img: 'person5.jpg',
+        displayName: 'Dark Bianca',
+        status: 'Be careful what you wish for',
+        time: '13:21'
+    },
+    {
+        id: 4,
+        name: 'Shimi Hey',
+        pass: '1',
+        img: 'person6.webp',
+        displayName: 'Shimi Hey',
+        status: 'Swalala',
+        time: '13:21'
+    },
+    {
+        id: 5,
+        name: 'Linda',
+        pass: '1',
+        img: 'person7.jpeg',
+        displayName: 'Linda',
+        status: 'I\'m high as fuck',
+        time: '13:21'
+    },
+    {
+        id: 6,
+        name: 'Hadar',
+        pass: '1',
+        img: 'person1.jpg',
+        displayName: 'Hadar',
+        status: 'dsa',
+        time: '13:21'
+    }
 ];
 
+export var users = [
+    {
+        name: 'dor',
+        pass: '1',
+        nickName: 'dorl12',
+        image: 'default.jpg'
+    },
+    {
+        name: 'Hadar',
+        pass: '1',
+        nickName: 'Hadar Pinto',
+        image: 'person2.jpg'
+    },
+
+
+
+
+]
