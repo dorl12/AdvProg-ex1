@@ -75,7 +75,7 @@ function Register({ registered, setRegister }) {
             </div>
             <div className="notes"><p>{notes}</p></div>
             <div className="footer">
-                <button type="button" className="btn" onClick={handle}>Register</button>
+                <button type="button" className="submit_button" onClick={handle}>Register</button>
             </div>
             <div className="backToLoginScreen">
                 <span>Already Registered? <a href="#" className="link-primary" onClick={() => (setRegister(false))}>Click here</a> to login</span>

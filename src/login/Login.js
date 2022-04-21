@@ -33,10 +33,9 @@ function Login({ registered, setCurrentUser }) {
                                 <label htmlFor="password">Password</label>
                                 <input type="password" namename="password" placeholder="password" id="password" />
                             </div>
+                            <button type="button" className="submit_button" onClick={handle}>Login</button>
+                            <i className="button__icon fas fa-chevron-right"></i>
                         </form>
-                        <div className="footer">
-                            <button type="button" className="btn" onClick={handle}>Login</button>
-                        </div>
                         <div className="registerOption">
                             <span>Not Registered? <a href="#" className="link-primary" onClick={() => { setRegister(true) }}>Click here</a> to register</span>
                         </div>
