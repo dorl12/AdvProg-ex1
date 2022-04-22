@@ -6,8 +6,8 @@
 }
 
 .videoMsg {
-    width: 100px;
-    height: 60px;
+    width: 150px;
+    height: 200px;
     display: flex;
     position: relative;
 }

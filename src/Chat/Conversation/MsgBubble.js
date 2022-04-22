@@ -1,5 +1,4 @@
 import React from 'react';
-import { useState } from 'react';
 import './MsgBubble.css';
 function MsgBubble(props) {
     const bubbleSide = props.side ? 'chat-bubble--right' : 'chat-bubble--left';
@@ -11,10 +10,10 @@ function MsgBubble(props) {
         <div className="row no-gutters">
             <div className={"col-md-3" + offset}>
                 <div className={"chat-bubble " + bubbleSide}>
-                    {type == "text" &&<div>{msg}</div>}
-                    {type == "imageMsg" && <div className={type}><img src={msg}></img></div>}
-                    {type == "videoMsg" && <div className={type}><video src={msg}></video></div>}
-                    {type == "audioMsg" && <div className={type}><audio src={msg}></audio></div>}
+                    {type === "text" &&<div>{msg}</div>}
+                    {type === "imageMsg" && <div className={type}><img alt='' src={msg}></img></div>}
+                    {type === "videoMsg" && <div className={type}><video controls src={msg}></video></div>}
+                    {type === "audioMsg" && <div className={type}><audio src={msg}></audio></div>}
                     <div className='timebubble'>{time}</div>
                 </div>
             </div>

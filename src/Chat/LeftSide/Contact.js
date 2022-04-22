@@ -4,7 +4,7 @@ import './Contact.css';
 function Contact(props) {
     var i;
      for (let j = 0; j < props.dataBase.length ; j++) {
-        if (props.dataBase[j].sender == props.displayName) {
+        if (props.dataBase[j].sender === props.displayName) {
             i = j;
 
         }
@@ -18,10 +18,16 @@ function Contact(props) {
     var index = props.dataBase[i].chat.length;
 
     try{
+    if (props.dataBase[i].chat[index-1].type === 'text'){
     var lastMessage = props.dataBase[i].chat[index-1].contain;
     var lastMessageTime = props.dataBase[i].chat[index-1].time;
+    }
     } catch {
         lastMessage = 'Start a Conversation!';
+    }
+    if (props.dataBase[i].chat[index-1].type != 'text'){
+        lastMessage = 'Attached File';
+        lastMessageTime = props.dataBase[i].chat[index-1].time;
     }
 
     return (
