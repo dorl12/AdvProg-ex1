@@ -5,8 +5,8 @@ import './LeftSide/LeftSide.js';
 import LeftSide from './LeftSide/LeftSide.js';
 import TopConv from './Conversation/TopConv';
 import ChatLog from './Conversation/ChatLog';
-import { useEffect, useState } from 'react';
-import { contacts, dataBaseChat, data } from './hooks/Storage.js';
+import { useState } from 'react';
+import { contacts , data } from './hooks/Storage.js';
 function ChatBox(props) {
     var indexContacts = contacts.findIndex((user) => { return user.name == props.currentUser });
     var indexData = data.findIndex((user) => { return user.name == props.currentUser });

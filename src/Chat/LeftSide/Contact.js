@@ -25,7 +25,7 @@ function Contact(props) {
     } catch {
         lastMessage = 'Start a Conversation!';
     }
-    if (props.dataBase[i].chat[index-1].type != 'text'){
+    if (props.dataBase[i].chat[index-1].type !== 'text'){
         lastMessage = 'Attached File';
         lastMessageTime = props.dataBase[i].chat[index-1].time;
     }

@@ -2,8 +2,6 @@
     
     color: white;
     width: 830px ;
-    /* height: 680px;
-    overflow-y: auto; */
     overflow-x:hidden;
 }
 #chat-panel {

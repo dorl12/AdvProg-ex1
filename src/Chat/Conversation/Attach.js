@@ -1,13 +1,11 @@
 import React from 'react';
 import './Attach.css';
-import { dataBaseChat } from '../hooks/Storage.js';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { ButtonGroup, ButtonToolbar, OverlayTrigger } from 'react-bootstrap'
 import { Popover } from 'react-bootstrap'
 import { Button } from 'react-bootstrap'
 import { Modal } from 'react-bootstrap'
 import { Form } from 'react-bootstrap'
-import MsgBubble from './MsgBubble.js'
 
 function Attach(props) {
     //time

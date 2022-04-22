@@ -1,7 +1,6 @@
 import React, { useState } from "react";
-import Login from "./Login";
 import './style.css';
-import { users } from './users.js'
+import { users } from '../Chat/hooks/Storage.js'
 
 function Register({ registered, setRegister }) {
     let [notes, setNotes] = useState("");
@@ -14,7 +13,6 @@ function Register({ registered, setRegister }) {
         var nickName = document.getElementById("nickName").value;
         if (validate(userName, password, passValidation, nickName)) {
             users.push({ name: userName, pass: password, nickName: nickName, profilePic: image });
-            //console.log(users);
             registered(true);
         }
     }
@@ -47,7 +45,6 @@ function Register({ registered, setRegister }) {
             if (fileReader.readyState === 2) setImage(fileReader.result);
         }
         fileReader.readAsDataURL(e.target.files[0]);
-        //console.log(image);
     }
 
     return (
@@ -86,25 +83,3 @@ function Register({ registered, setRegister }) {
 }
 
 export default Register;
-
-// <div className="base-container">
-// <div className="top">
-// <div></div>
-// </div>
-// <div className="buttom"></div>
-// <div className="content">
-//     <div className="form">
-//         <div className="form-group">
-//             <label htmlFor="userName">Username</label>
-//             <input type="text" name="username" placeholder="username" />
-//         </div>
-//         <div className="form-group">
-//             <label htmlFor="password">Password</label>
-//             <input type="password" name="password" placeholder="password" />
-//         </div>
-//     </div>
-// </div>
-// <div className="footer">
-//     <button type="button" className="btn" onClick={handle}>Login</button>
-// </div>
-// </div>

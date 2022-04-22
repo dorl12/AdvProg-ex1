@@ -1,7 +1,6 @@
 import React, { useState } from "react";
-import loginImg from './loginImg.jpg'
 import './style.css';
-import { users } from './users.js'
+import { users } from '../Chat/hooks/Storage.js'
 import Register from './Register.js'
 
 function Login({ registered, setCurrentUser }) {
@@ -58,25 +57,3 @@ function Login({ registered, setCurrentUser }) {
 }
 
 export default Login;
-
-// <div className="base-container">
-// <div className="top">
-// <div></div>
-// </div>
-// <div className="buttom"></div>
-// <div className="content">
-//     <div className="form">
-//         <div className="form-group">
-//             <label htmlFor="userName">Username</label>
-//             <input type="text" name="username" placeholder="username" />
-//         </div>
-//         <div className="form-group">
-//             <label htmlFor="password">Password</label>
-//             <input type="password" name="password" placeholder="password" />
-//         </div>
-//     </div>
-// </div>
-// <div className="footer">
-//     <button type="button" className="btn" onClick={handle}>Login</button>
-// </div>
-// </div>
