@@ -49,9 +49,9 @@ function Attach(props) {
     }
 
     function handleChange(e) {
-        const files = e.target.files
-        setImage(URL.createObjectURL(files[0]))
-        handleClose()
+        const files = e.target.files;
+        setImage(URL.createObjectURL(files[0]));
+        handleClose();
     }
 
     return (
@@ -86,7 +86,7 @@ function Attach(props) {
                                                     <Button variant="secondary" onClick={handleClose}>
                                                         Close
                                                     </Button>
-                                                    <Button variant="primary" onClick={handleClose}>
+                                                    <Button variant="primary" onClick={handleChange}>
                                                         Save Changes
                                                     </Button>
                                                 </Modal.Footer>
@@ -112,7 +112,7 @@ function Attach(props) {
                                                     <Button variant="secondary" onClick={handleClose}>
                                                         Close
                                                     </Button>
-                                                    <Button variant="primary" onClick={handleClose}>
+                                                    <Button variant="primary" onClick={handleChange}>
                                                         Save Changes
                                                     </Button>
                                                 </Modal.Footer>
@@ -137,7 +137,7 @@ function Attach(props) {
                                                     <Button variant="secondary" onClick={handleClose}>
                                                         Close
                                                     </Button>
-                                                    <Button variant="primary" onClick={handleClose}>
+                                                    <Button variant="primary" onClick={handleChange}>
                                                         Save Changes
                                                     </Button>
                                                 </Modal.Footer>
