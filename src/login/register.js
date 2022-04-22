@@ -14,7 +14,7 @@ function Register({ registered, setRegister }) {
         var nickName = document.getElementById("nickName").value;
         if (validate(userName, password, passValidation, nickName)) {
             users.push({ name: userName, pass: password, nickName: nickName, profilePic: image });
-            console.log(users);
+            //console.log(users);
             registered(true);
         }
     }
@@ -47,6 +47,7 @@ function Register({ registered, setRegister }) {
             if (fileReader.readyState === 2) setImage(fileReader.result);
         }
         fileReader.readAsDataURL(e.target.files[0]);
+        //console.log(image);
     }
 
     return (
