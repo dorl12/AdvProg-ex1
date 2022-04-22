@@ -1,5 +1,13 @@
 .imageMsg {
     width: 60px;
+    height: 60px;
+    display: flex;
+    position: relative;
+}
+
+.videoMsg {
+    width: 100px;
+    height: 60px;
     display: flex;
     position: relative;
 }
