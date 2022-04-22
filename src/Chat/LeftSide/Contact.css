@@ -7,6 +7,9 @@
     transition: .3s ease;
     border-radius: 7px;
 }
+.text{
+    max-width: 35vw;
+}
 
  .text-muted {
      width: 275px;

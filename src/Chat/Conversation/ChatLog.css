@@ -2,16 +2,40 @@
     
     color: white;
     width: 830px ;
-    height: 680px;
-    overflow-y: auto;
+    /* height: 680px;
+    overflow-y: auto; */
     overflow-x:hidden;
 }
+#chat-panel {
+    height: 710px;
+    overflow-y: auto;
+  }
 
+::-webkit-scrollbar {
+    width: 9px;
+    height: 11px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    width: 12px;
+    background: transparent;
+    border-radius: 1rem;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    width: 5em;
+    background-color: #9D9A91;
+    outline: 2px solid transparent;
+    border-radius: 1rem;
+  }
+  
 .chat-bubble {
     padding: 10px 14px;
     background: darkcyan;
     margin: 10px 30px;
     border-radius: 9px;
+    max-width: 100% !important;
+    word-wrap: break-word;
 }
 
 .chat-bubble--left {

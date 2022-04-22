@@ -12,10 +12,12 @@ const time = props.time;
         <div className="row no-gutters">
             <div className={"col-md-3" + offset}>
                 <div className={"chat-bubble " + bubbleSide}>
+
                 <div className="textMsg"></div>
                 <div className="imageMsg"><img src="person1.jpg"></img></div>
                 <div className="videoMsg"></div>
                 <div className="audioMsg"></div>
+
                 <div className='timebubble'>{time}</div>
                 </div>
             </div>
