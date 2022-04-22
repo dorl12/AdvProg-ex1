@@ -7,6 +7,12 @@ import Register from './Register.js'
 function Login({ registered, setCurrentUser }) {
     let [register, setRegister] = useState(false);
 
+    const handleKey = (e) => {
+        if (e.key === "Enter") {
+            handle();
+        }
+    }
+
     const handle = () => {
         var userName = document.getElementById("username").value;
         var password = document.getElementById("password").value;
@@ -31,7 +37,7 @@ function Login({ registered, setCurrentUser }) {
                             <div className="form-group">
                                 <i className="login_icon fas fa-lock"></i>
                                 <label htmlFor="password">Password</label>
-                                <input type="password" namename="password" placeholder="password" id="password" />
+                                <input onKeyDown={handleKey} type="password" namename="password" placeholder="password" id="password" />
                             </div>
                             <button type="button" className="submit_button" onClick={handle}>Login</button>
                             <i className="button__icon fas fa-chevron-right"></i>
