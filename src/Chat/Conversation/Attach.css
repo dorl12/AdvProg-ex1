@@ -1,4 +1,14 @@
+.input-group {
+    position: relative;
+    height: 48px;
+}
+
+.btn-outline-secondary {
+    height: 48px;
+}
+
 .icon-send {
+    position: relative;
     padding: 10px 15px;
     display:inline-flex;
     vertical-align: baseline;

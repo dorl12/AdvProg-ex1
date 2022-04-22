@@ -1,214 +1,214 @@
-export var dataBaseChat = [
-    {
-        sender: 'Hadar Pinto', chat: [
-            {
-                side: true,
-                type: 'text',
-                contain: 'Hey motek!',
-                time: ''
-            },
-            {
-                side: false,
-                type: 'text',
-                contain: 'Wazzup?',
-                time: ''
-            },
-            {
-                side: true,
-                type: 'text',
-                contain: 'Great',
-                time: ''
-            },
-            {
-                side: true,
-                type: 'text',
-                contain: 'how are you?',
-                time: ''
-            },
-            {
-                side: false,
-                type: 'text',
-                contain: 'amazing',
-                time: ''
-            }
-        ]
-    },
+// export var dataBaseChat = [
+//     {
+//         sender: 'Hadar Pinto', chat: [
+//             {
+//                 side: true,
+//                 type: 'text',
+//                 contain: 'Hey motek!',
+//                 time: ''
+//             },
+//             {
+//                 side: false,
+//                 type: 'text',
+//                 contain: 'Wazzup?',
+//                 time: ''
+//             },
+//             {
+//                 side: true,
+//                 type: 'text',
+//                 contain: 'Great',
+//                 time: ''
+//             },
+//             {
+//                 side: true,
+//                 type: 'text',
+//                 contain: 'how are you?',
+//                 time: ''
+//             },
+//             {
+//                 side: false,
+//                 type: 'text',
+//                 contain: 'amazing',
+//                 time: ''
+//             }
+//         ]
+//     },
 
-    {
-        sender: 'Hadaros Pintomos', chat: [
-            {
-                side: true,
-                type: 'text',
-                contain: 'aaaaaaaaa',
-                time: ''
-            },
-            {
-                side: false,
-                type: 'text',
-                contain: 'aaaaaaaa',
-                time: ''
-            },
-            {
-                side: true,
-                type: 'text',
-                contain: 'aaaaaaaaaa',
-                time: ''
-            },
-            {
-                side: true,
-                type: 'text',
-                contain: 'aaaaaaaaa',
-                time: ''
-            },
-            {
-                side: false,
-                type: 'text',
-                contain: 'aaaaaaaaaaa',
-                time: ''
-            }
-        ]
-    },
+//     {
+//         sender: 'Hadaros Pintomos', chat: [
+//             {
+//                 side: true,
+//                 type: 'text',
+//                 contain: 'aaaaaaaaa',
+//                 time: ''
+//             },
+//             {
+//                 side: false,
+//                 type: 'text',
+//                 contain: 'aaaaaaaa',
+//                 time: ''
+//             },
+//             {
+//                 side: true,
+//                 type: 'text',
+//                 contain: 'aaaaaaaaaa',
+//                 time: ''
+//             },
+//             {
+//                 side: true,
+//                 type: 'text',
+//                 contain: 'aaaaaaaaa',
+//                 time: ''
+//             },
+//             {
+//                 side: false,
+//                 type: 'text',
+//                 contain: 'aaaaaaaaaaa',
+//                 time: ''
+//             }
+//         ]
+//     },
 
-    {
-        sender: 'Katz Vegarjuba', chat: [
-            {
-                side: true,
-                type: 'text',
-                contain: 'bbbbbbbbbbbbb',
-                time: ''
-            },
-            {
-                side: false,
-                type: 'text',
-                contain: 'bbbbbbbbbbbb?',
-                time: ''
-            },
-            {
-                side: true,
-                type: 'text',
-                contain: 'bbbbbbbbbbbbb',
-                time: ''
-            },
-            {
-                side: true,
-                type: 'text',
-                contain: 'bbbbbbbbbbbbbb',
-                time: ''
-            },
-            {
-                side: false,
-                type: 'text',
-                contain: 'bbbbbbbbbbb',
-                time: ''
-            }
-        ]
-    },
+//     {
+//         sender: 'Katz Vegarjuba', chat: [
+//             {
+//                 side: true,
+//                 type: 'text',
+//                 contain: 'bbbbbbbbbbbbb',
+//                 time: ''
+//             },
+//             {
+//                 side: false,
+//                 type: 'text',
+//                 contain: 'bbbbbbbbbbbb?',
+//                 time: ''
+//             },
+//             {
+//                 side: true,
+//                 type: 'text',
+//                 contain: 'bbbbbbbbbbbbb',
+//                 time: ''
+//             },
+//             {
+//                 side: true,
+//                 type: 'text',
+//                 contain: 'bbbbbbbbbbbbbb',
+//                 time: ''
+//             },
+//             {
+//                 side: false,
+//                 type: 'text',
+//                 contain: 'bbbbbbbbbbb',
+//                 time: ''
+//             }
+//         ]
+//     },
 
-    {
-        sender: 'Dark Bianca', chat: [
-            {
-                side: true,
-                type: 'text',
-                contain: 'cccccccccccc',
-                time: ''
-            },
-            {
-                side: false,
-                type: 'text',
-                contain: 'ccccccccccccccc',
-                time: ''
-            },
-            {
-                side: true,
-                type: 'text',
-                contain: 'ccccccccccc',
-                time: ''
-            },
-            {
-                side: true,
-                type: 'text',
-                contain: 'ccccccccccc?',
-                time: ''
-            },
-            {
-                side: false,
-                type: 'text',
-                contain: 'ccccccccc',
-                time: ''
-            }
-        ]
-    },
+//     {
+//         sender: 'Dark Bianca', chat: [
+//             {
+//                 side: true,
+//                 type: 'text',
+//                 contain: 'cccccccccccc',
+//                 time: ''
+//             },
+//             {
+//                 side: false,
+//                 type: 'text',
+//                 contain: 'ccccccccccccccc',
+//                 time: ''
+//             },
+//             {
+//                 side: true,
+//                 type: 'text',
+//                 contain: 'ccccccccccc',
+//                 time: ''
+//             },
+//             {
+//                 side: true,
+//                 type: 'text',
+//                 contain: 'ccccccccccc?',
+//                 time: ''
+//             },
+//             {
+//                 side: false,
+//                 type: 'text',
+//                 contain: 'ccccccccc',
+//                 time: ''
+//             }
+//         ]
+//     },
 
-    {
-        sender: 'Shimi Hey', chat: [
-            {
-                side: true,
-                type: 'text',
-                contain: 'dddddddddd',
-                time: ''
-            },
-            {
-                side: false,
-                type: 'text',
-                contain: 'ddddddddddddd',
-                time: ''
-            },
-            {
-                side: true,
-                type: 'text',
-                contain: 'dddddddddddd',
-                time: ''
-            },
-            {
-                side: true,
-                type: 'text',
-                contain: 'ddddddddddd',
-                time: ''
-            },
-            {
-                side: false,
-                type: 'text',
-                contain: 'dddddddddddd',
-                time: ''
-            }
-        ]
-    },
+//     {
+//         sender: 'Shimi Hey', chat: [
+//             {
+//                 side: true,
+//                 type: 'text',
+//                 contain: 'dddddddddd',
+//                 time: ''
+//             },
+//             {
+//                 side: false,
+//                 type: 'text',
+//                 contain: 'ddddddddddddd',
+//                 time: ''
+//             },
+//             {
+//                 side: true,
+//                 type: 'text',
+//                 contain: 'dddddddddddd',
+//                 time: ''
+//             },
+//             {
+//                 side: true,
+//                 type: 'text',
+//                 contain: 'ddddddddddd',
+//                 time: ''
+//             },
+//             {
+//                 side: false,
+//                 type: 'text',
+//                 contain: 'dddddddddddd',
+//                 time: ''
+//             }
+//         ]
+//     },
 
-    {
-        sender: 'Linda', chat: [
-            {
-                side: true,
-                type: 'text',
-                contain: 'wowwww',
-                time: ''
-            },
-            {
-                side: false,
-                type: 'text',
-                contain: 'wowwww?',
-                time: ''
-            },
-            {
-                side: true,
-                type: 'text',
-                contain: 'wowwww',
-                time: ''
-            },
-            {
-                side: true,
-                type: 'text',
-                contain: 'wowwww?',
-                time: ''
-            },
-            {
-                side: false,
-                type: 'text',
-                contain: 'wowwww',
-                time: ''
-            }
-        ]
-    },
-]
+//     {
+//         sender: 'Linda', chat: [
+//             {
+//                 side: true,
+//                 type: 'text',
+//                 contain: 'wowwww',
+//                 time: ''
+//             },
+//             {
+//                 side: false,
+//                 type: 'text',
+//                 contain: 'wowwww?',
+//                 time: ''
+//             },
+//             {
+//                 side: true,
+//                 type: 'text',
+//                 contain: 'wowwww',
+//                 time: ''
+//             },
+//             {
+//                 side: true,
+//                 type: 'text',
+//                 contain: 'wowwww?',
+//                 time: ''
+//             },
+//             {
+//                 side: false,
+//                 type: 'text',
+//                 contain: 'wowwww',
+//                 time: ''
+//             }
+//         ]
+//     },
+// ]
 
 export var data = [
     {

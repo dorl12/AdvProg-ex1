@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import loginImg from './loginImg.jpg'
+import Login from "./Login";
 import './style.css';
 import { users } from './users.js'
 
-function Register({ registered }) {
+function Register({ registered, setRegister }) {
     let [notes, setNotes] = useState("");
     let [image, setImage] = useState("");
 
@@ -47,8 +47,7 @@ function Register({ registered }) {
             if (fileReader.readyState === 2) setImage(fileReader.result);
         }
         fileReader.readAsDataURL(e.target.files[0]);
-        //console.log('image',image);
-    } 
+    }
 
     return (
         <div className="content">
@@ -62,8 +61,8 @@ function Register({ registered }) {
                     <input type="password" name="password" placeholder="password" id="password" />
                 </div>
                 <div className="form-group">
-                    <label htmlFor="passwordValidation">PasswordValidation</label>
-                    <input type="password" name="passwordValidation" placeholder="passwordValidation" id="passwordValidation" />
+                    <label htmlFor="passwordValidation">Confirm Password</label>
+                    <input type="password" name="passwordValidation" placeholder="Confirm Password" id="passwordValidation" />
                 </div>
                 <div className="form-group">
                     <label htmlFor="nickName">NickName</label>
@@ -76,7 +75,10 @@ function Register({ registered }) {
             </div>
             <div className="notes"><p>{notes}</p></div>
             <div className="footer">
-                <button type="button" className="btn" onClick={handle}>Register</button>
+                <button type="button" className="submit_button" onClick={handle}>Register</button>
+            </div>
+            <div className="backToLoginScreen">
+                <span>Already Registered? <a href="#" className="link-primary" onClick={() => (setRegister(false))}>Click here</a> to login</span>
             </div>
         </div>
     );

@@ -20,27 +20,32 @@ function Login({ registered, setCurrentUser }) {
     return (
         <div className="container">
             <div className="screen">
-                {register ? <Register registered={registered}></Register> :
+                {register ? <Register registered={registered} setRegister={setRegister}></Register> :
                     <div className="content">
                         <form className="form-login">
                             <div className="form-group">
-                            <i className="login_icon fas fa-lock"></i>
+                                <i className="login_icon fas fa-lock"></i>
                                 <label htmlFor="userName">Username</label>
                                 <input type="text" name="username" placeholder="username" id="username" />
                             </div>
                             <div className="form-group">
-                            <i className="login_icon fas fa-lock"></i>
+                                <i className="login_icon fas fa-lock"></i>
                                 <label htmlFor="password">Password</label>
                                 <input type="password" namename="password" placeholder="password" id="password" />
                             </div>
+                            <button type="button" className="submit_button" onClick={handle}>Login</button>
+                            <i className="button__icon fas fa-chevron-right"></i>
                         </form>
-                        <button className="button login">
-                        </button>
-                        <div className="footer">
-                            <button type="button" className="btn" onClick={handle}>Login</button>
+                        <div className="registerOption">
+                            <span>Not Registered? <a href="#" className="link-primary" onClick={() => { setRegister(true) }}>Click here</a> to register</span>
                         </div>
-                        <span>Not Registered? <a href="#" className="link-primary" onClick={() => { setRegister(true) }}>Click here</a> to register</span>
                     </div>}
+                <div class="screen__background">
+                    <span class="screen__background__shape screen__background__shape4"></span>
+                    <span class="screen__background__shape screen__background__shape3"></span>
+                    <span class="screen__background__shape screen__background__shape2"></span>
+                    <span class="screen__background__shape screen__background__shape1"></span>
+                </div>
             </div>
         </div>
     );
