@@ -9,16 +9,18 @@ function LeftSide(props) {
 
     const contactList = props.contactResult.map((contact, key) => {
         return <Contact {...contact} key={key} 
-        choose={props.choose} setTop={props.setTop}
-        dataBase={props.dataBase} setDataBase={props.addChat} />
+        choose={props.choose} setCurrentActiveUserChat={props.setCurrentActiveUserChat}
+        dataBase={props.dataBase} setDataBase={props.setDataBase}
+        setIsJustLoggedIn={props.setIsJustLoggedIn} />
     });
 
 
     return (
         <div className="left-side">
             <div className="left-side-top">
-                <TopLeft contactList={props.contactList} addContact={props.addContact}
-                dataBase={props.dataBase} addChat={props.addChat}
+                <TopLeft currentUser={props.currentUser}
+                contactList={props.contactList} addContact={props.addContact}
+                dataBase={props.dataBase} setDataBase={props.setDataBase}
                 doSearch={props.doSearch} refresh={props.refresh} setRefresh={props.setRefresh} />
             </div>
             <div className="left-side-contacts">

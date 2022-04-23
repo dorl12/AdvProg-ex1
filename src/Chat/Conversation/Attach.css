@@ -1,4 +1,15 @@
+.input-group {
+    position: relative;
+    height: 48px;
+}
+
+.btn-outline-secondary {
+    height: 48px;
+}
+
 .icon-send {
+    height: 48px;
+    position: relative;
     padding: 10px 15px;
     display:inline-flex;
     vertical-align: baseline;
@@ -9,4 +20,9 @@
 
 .icon-send:hover {
     cursor: pointer;
+}
+
+.input-wrapper {
+    display: flex ;
+    background-color: transparent;
 }

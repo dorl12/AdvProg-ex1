@@ -1,7 +1,19 @@
 import React from 'react';
+import { contacts } from '../hooks/Storage.js';
 
 function TopConv(props) {
-    var user = props.contactList[props.setTop]
+    var j;
+    var user;
+
+    if (props.contactList.findIndex((user) => { return user.displayName == props.currentActiveUserChat }) != -1) {
+        j = props.contactList.findIndex((user) => { return user.displayName == props.currentActiveUserChat });
+        user = props.contactList[j];
+    }
+    else {
+        j = contacts.findIndex((user) => { return user.displayName == props.currentActiveUserChat});
+        user = contacts[j];
+    }
+
     return (
         <div className="settings-tray">
             <div className="friend-top">

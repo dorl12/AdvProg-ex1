@@ -1,21 +1,37 @@
 import React from 'react';
-import { useState } from 'react';
 import './Contact.css';
-import { dataBaseChat } from '../hooks/Storage.js';
-
 
 function Contact(props) {
+    var i;
+     for (let j = 0; j < props.dataBase.length ; j++) {
+        if (props.dataBase[j].sender === props.displayName) {
+            i = j;
+
+        }
+    }
     function handleClick() {
-        props.choose(props.dataBase[props.id].chat)
-        props.setTop(props.id)
+        props.choose(props.dataBase[i].chat);
+        props.setCurrentActiveUserChat(props.displayName);
+        props.setIsJustLoggedIn(false);
     }
 
-    var index = props.dataBase[props.id].chat.length;
-    var lastMessage = props.dataBase[props.id].chat[index-1].contain;
+    var index = props.dataBase[i].chat.length;
 
+    try{
+    if (props.dataBase[i].chat[index-1].type === 'text'){
+    var lastMessage = props.dataBase[i].chat[index-1].contain;
+    var lastMessageTime = props.dataBase[i].chat[index-1].time;
+    }
+    else {
+            lastMessage = 'Attached File';
+            lastMessageTime = props.dataBase[i].chat[index-1].time;
+         }
+    } catch {
+        lastMessage = 'Start a Conversation!';
+    }
 
     return (
-        <div className="friend-drawer" tabIndex={props.id} onClick={handleClick}>
+        <div className="friend-drawer" tabIndex='0' onClick={handleClick}>
             <span> <img className="profile-image" src={props.img} alt=""></img></span>
             <span>
                 <div className="text">
@@ -23,7 +39,7 @@ function Contact(props) {
                     <p className="text-muted">{lastMessage}</p>
                 </div>
             </span>
-            <p className="text-muted">{props.time}</p>
+            <p className="text-muted">{lastMessageTime}</p>
         </div>
     )
 }
