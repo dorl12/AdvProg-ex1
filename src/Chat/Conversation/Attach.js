@@ -168,10 +168,9 @@ function Attach(props) {
     }
 
     const uploadAud = (e) => {
-        //let source = URL.createObjectURL(recording);
         handleCloseAud();
         var newChat = props.log;
-        newChat.push({ side: true, type: 'audioMsg', contain: recording, time: messageTime })
+        newChat.push({ side: true, type: 'audioMsg', contain: recording.url, time: messageTime })
         props.setLog(newChat);
         if (props.bool === false) {
             props.setbool(true)
@@ -275,7 +274,7 @@ function Attach(props) {
                                                         Close
                                                     </Button>
                                                     <Button variant="primary" onClick={uploadAud}>
-                                                        Send record
+                                                        Send Record
                                                     </Button>
                                                 </Modal.Footer>
                                             </Modal>

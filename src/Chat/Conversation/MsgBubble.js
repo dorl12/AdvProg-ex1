@@ -15,7 +15,7 @@ function MsgBubble(props) {
                     {type == "text" &&<div>{msg}</div>}
                     {type == "imageMsg" && <div className={type}><img src={msg}></img></div>}
                     {type == "videoMsg" && <div className={type}><video controls><source src={msg} type="video/mp4"/></video></div>}
-                    {type == "audioMsg" && <div className={type}><audio src={msg}></audio></div>}
+                    {type == "audioMsg" && <div className={type}><audio controls><source src={msg}/></audio></div>}
                     <div className='timebubble'>{time}</div>
                 </div>
             </div>
