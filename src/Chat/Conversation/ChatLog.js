@@ -10,7 +10,6 @@ function ChatLog(props) {
     const messages = document.getElementById('chat-panel');
     function scrollToBottom() {
         messages.scrollTop = messages.scrollHeight;
-        console.log(messages.scrollTop);
       }
       scrollToBottom();
     } catch {

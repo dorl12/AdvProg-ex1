@@ -1,8 +1,9 @@
 .left-side-contacts{
-    width: 402px;
+    width: 414px;
     height: 680px;
     overflow-y: scroll;
-    background: rgb(207, 191, 191);
+    background: #0764eb2b;
+    border-radius: 7px;
 }
 
 .friend-drawer:focus {

@@ -17,9 +17,10 @@ input {
     float: right;
 }
 .top-left{
-    background: gray;
+    background: #21c1fda6;
     padding: 10px 15px;
     border-radius: 7px;
+    width: 414px;
 }
 
 .profile-image {

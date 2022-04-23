@@ -8,6 +8,7 @@
 }
 
 .icon-send {
+    height: 48px;
     position: relative;
     padding: 10px 15px;
     display:inline-flex;
@@ -19,4 +20,10 @@
 
 .icon-send:hover {
     cursor: pointer;
+}
+
+.input-wrapper {
+    display: flex ;
+    margin-top: 100px;
+    background-color: transparent;
 }

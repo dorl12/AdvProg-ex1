@@ -219,31 +219,37 @@ export var data = [
                 {
                     side: true,
                     type: 'text',
-                    contain: 'wowwww',
+                    contain: 'hey Linda, send me a pic when you were little',
                     time: ''
                 },
                 {
                     side: false,
                     type: 'text',
-                    contain: 'wowwww?',
+                    contain: 'sure!',
+                    time: ''
+                },
+                {
+                    side: false,
+                    type: 'imageMsg',
+                    contain: 'littleLinda.jpeg',
                     time: ''
                 },
                 {
                     side: true,
                     type: 'text',
-                    contain: 'wowwww',
-                    time: ''
-                },
-                {
-                    side: true,
-                    type: 'text',
-                    contain: 'wowwww?',
+                    contain: 'so cute! do  you know how to spin?',
                     time: ''
                 },
                 {
                     side: false,
                     type: 'text',
-                    contain: 'wowwww',
+                    contain: 'like a pro',
+                    time: ''
+                },
+                {
+                    side: false,
+                    type: 'videoMsg',
+                    contain: 'spin.mp4',
                     time: ''
                 }
             ]}

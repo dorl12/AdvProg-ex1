@@ -36,7 +36,7 @@ function Register({ registered, setRegister }) {
             note += 'password do not match';
         }
         setNotes(note);
-        return (note == '');
+        return (note === '');
     }
 
     const uploadPic = (e) => {

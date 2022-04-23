@@ -22,12 +22,12 @@ function Contact(props) {
     var lastMessage = props.dataBase[i].chat[index-1].contain;
     var lastMessageTime = props.dataBase[i].chat[index-1].time;
     }
+    else {
+            lastMessage = 'Attached File';
+            lastMessageTime = props.dataBase[i].chat[index-1].time;
+         }
     } catch {
         lastMessage = 'Start a Conversation!';
-    }
-    if (props.dataBase[i].chat[index-1].type !== 'text'){
-        lastMessage = 'Attached File';
-        lastMessageTime = props.dataBase[i].chat[index-1].time;
     }
 
     return (
