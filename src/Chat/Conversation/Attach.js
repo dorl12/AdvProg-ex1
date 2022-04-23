@@ -1,7 +1,7 @@
 import React from 'react';
 import './Attach.css';
 import { dataBaseChat } from '../hooks/Storage.js';
-import { useEffect, useState } from 'react';
+import { useRef, useState } from 'react';
 import { ButtonGroup, ButtonToolbar, OverlayTrigger } from 'react-bootstrap'
 import { Popover } from 'react-bootstrap'
 import { Button } from 'react-bootstrap'
@@ -70,6 +70,75 @@ function Attach(props) {
         }
     }
 
+    const [stream, setStream] = useState({
+        access: false,
+        recorder: null,
+        error: ""
+    });
+
+    const [recording, setRecording] = useState({
+        active: false,
+        available: false,
+        url: ""
+    });
+
+    const chunks = useRef([]);
+
+    function getAccess() {
+        navigator.mediaDevices
+            .getUserMedia({ audio: true })
+            .then((mic) => {
+                let mediaRecorder;
+
+                try {
+                    mediaRecorder = new MediaRecorder(mic, {
+                        mimeType: "audio/webm"
+                    });
+                } catch (err) {
+                    console.log(err);
+                }
+
+                const track = mediaRecorder.stream.getTracks()[0];
+                track.onended = () => console.log("ended");
+
+                mediaRecorder.onstart = function () {
+                    setRecording({
+                        active: true,
+                        available: false,
+                        url: ""
+                    });
+                };
+
+                mediaRecorder.ondataavailable = function (e) {
+                    console.log("data available");
+                    chunks.current.push(e.data);
+                };
+
+                mediaRecorder.onstop = async function () {
+                    console.log("stopped");
+
+                    const url = URL.createObjectURL(chunks.current[0]);
+                    chunks.current = [];
+
+                    setRecording({
+                        active: false,
+                        available: true,
+                        url
+                    });
+                };
+
+                setStream({
+                    ...stream,
+                    access: true,
+                    recorder: mediaRecorder
+                });
+            })
+            .catch((error) => {
+                console.log(error);
+                setStream({ ...stream, error });
+            });
+    }
+
     const uploadPic = (e) => {
         let source = URL.createObjectURL(e.target.files[0]);
         handleCloseImg();
@@ -89,6 +158,20 @@ function Attach(props) {
         handleCloseVid();
         var newChat = props.log;
         newChat.push({ side: true, type: 'videoMsg', contain: source, time: messageTime })
+        props.setLog(newChat);
+        if (props.bool === false) {
+            props.setbool(true)
+        }
+        else {
+            props.setbool(false)
+        }
+    }
+
+    const uploadAud = (e) => {
+        //let source = URL.createObjectURL(recording);
+        handleCloseAud();
+        var newChat = props.log;
+        newChat.push({ side: true, type: 'audioMsg', contain: recording, time: messageTime })
         props.setLog(newChat);
         if (props.bool === false) {
             props.setbool(true)
@@ -123,18 +206,17 @@ function Attach(props) {
                                                 <Modal.Body>
                                                     <Form.Group controlId="formFile" className="mb-3">
                                                         <Form.Label>Default file input example</Form.Label>
-                                                        <Form.Control type="file" onChange={uploadPic} />
+                                                        <Form.Control type="file" onChange={uploadPic}/>
                                                     </Form.Group>
                                                 </Modal.Body>
                                                 <Modal.Footer>
                                                     <Button variant="secondary" onClick={handleCloseImg}>
                                                         Close
                                                     </Button>
-                                                    <Button type="file" variant="primary">
-                                                        Save Changes
-                                                    </Button>
                                                 </Modal.Footer>
                                             </Modal>
+
+
                                             <Button variant="primary" onClick={handleShowVid}>
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-camera-reels" viewBox="0 0 16 16">
                                                     <path d="M6 3a3 3 0 1 1-6 0 3 3 0 0 1 6 0zM1 3a2 2 0 1 0 4 0 2 2 0 0 0-4 0z" />
@@ -149,18 +231,17 @@ function Attach(props) {
                                                 <Modal.Body>
                                                     <Form.Group controlId="formFile" className="mb-3">
                                                         <Form.Label>Default file input example</Form.Label>
-                                                        <Form.Control type="file" onChange={uploadVideo} />
+                                                        <Form.Control type="file" onChange={uploadVideo}/>
                                                     </Form.Group>
                                                 </Modal.Body>
                                                 <Modal.Footer>
                                                     <Button variant="secondary" onClick={handleCloseVid}>
                                                         Close
                                                     </Button>
-                                                    <Button variant="primary">
-                                                        Save Changes
-                                                    </Button>
                                                 </Modal.Footer>
                                             </Modal>
+
+
                                             <Button variant="primary" onClick={handleShowAud}>
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-mic" viewBox="0 0 16 16">
                                                     <path d="M3.5 6.5A.5.5 0 0 1 4 7v1a4 4 0 0 0 8 0V7a.5.5 0 0 1 1 0v1a5 5 0 0 1-4.5 4.975V15h3a.5.5 0 0 1 0 1h-7a.5.5 0 0 1 0-1h3v-2.025A5 5 0 0 1 3 8V7a.5.5 0 0 1 .5-.5z" />
@@ -169,20 +250,32 @@ function Attach(props) {
                                             </Button>
                                             <Modal show={showAud} onHide={handleCloseAud}>
                                                 <Modal.Header closeButton>
-                                                    <Modal.Title>Modal heading</Modal.Title>
+                                                    <Modal.Title></Modal.Title>
                                                 </Modal.Header>
                                                 <Modal.Body>
-                                                    <Form.Group controlId="formFile" className="mb-3">
-                                                        <Form.Label>Default file input example</Form.Label>
-                                                        <Form.Control type="file" onChange='' />
-                                                    </Form.Group>
+                                                    <div className="recordAudio">
+                                                        {stream.access ? (
+                                                            <div className="audio-container">
+                                                                <button
+                                                                    className={recording.active ? "active" : null}
+                                                                    onClick={() => !recording.active && stream.recorder.start()}
+                                                                >
+                                                                    Start Recording
+                                                                </button>
+                                                                <button onClick={() => stream.recorder.stop()}>Stop Recording</button>
+                                                                {recording.available && <audio controls src={recording.url} />}
+                                                            </div>
+                                                        ) : (
+                                                            <button onClick={getAccess}>Get Mic Access</button>
+                                                        )}
+                                                    </div>
                                                 </Modal.Body>
                                                 <Modal.Footer>
                                                     <Button variant="secondary" onClick={handleCloseAud}>
                                                         Close
                                                     </Button>
-                                                    <Button variant="primary">
-                                                        Save Changes
+                                                    <Button variant="primary" onClick={uploadAud}>
+                                                        Send record
                                                     </Button>
                                                 </Modal.Footer>
                                             </Modal>
