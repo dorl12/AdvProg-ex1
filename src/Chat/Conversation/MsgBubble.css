@@ -11,3 +11,10 @@
     display: flex;
     position: relative;
 }
+
+.audioMsg {
+    width: 150px;
+    height: 60px;
+    display: flex;
+    position: relative;
+}

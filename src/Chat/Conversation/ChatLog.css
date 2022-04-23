@@ -6,6 +6,8 @@
 #chat-panel {
     height: 750px;
     overflow-y: auto;
+    flex-direction: column;
+    display: flex;
   }
 
 ::-webkit-scrollbar {

@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import './style.css';
-import { users } from '../Chat/hooks/Storage.js'
+import { contacts, data } from '../Chat/hooks/Storage.js'
 
-function Register({ registered, setRegister }) {
+function Register({ registered, setRegister, setCurrentUser }) {
     let [notes, setNotes] = useState("");
     let [image, setImage] = useState("");
 
@@ -12,7 +12,13 @@ function Register({ registered, setRegister }) {
         var passValidation = document.getElementById("passwordValidation").value;
         var nickName = document.getElementById("nickName").value;
         if (validate(userName, password, passValidation, nickName)) {
-            users.push({ name: userName, pass: password, nickName: nickName, profilePic: image });
+            contacts.push({ name: userName, pass: password, displayName: nickName, img: image });
+            data.push({
+                name: userName,
+                contacts: [],
+                info: [{sender: '', chat :[]}]});
+            
+            setCurrentUser(userName);   
             registered(true);
         }
     }

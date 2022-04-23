@@ -12,8 +12,8 @@ function MsgBubble(props) {
                 <div className={"chat-bubble " + bubbleSide}>
                     {type === "text" &&<div>{msg}</div>}
                     {type === "imageMsg" && <div className={type}><img alt='' src={msg}></img></div>}
-                    {type === "videoMsg" && <div className={type}><video controls src={msg}></video></div>}
-                    {type === "audioMsg" && <div className={type}><audio src={msg}></audio></div>}
+                    {type === "videoMsg" && <div className={type}><video controls src={msg}  type="video/mp4"></video></div>}
+                    {type === "audioMsg" && <div className={type}><audio controls><source src={msg} type="audio/ogg"></source></audio></div>}
                     <div className='timebubble'>{time}</div>
                 </div>
             </div>
