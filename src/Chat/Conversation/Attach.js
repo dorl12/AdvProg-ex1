@@ -121,7 +121,10 @@ function Attach(props) {
                                                     <Modal.Title>Modal heading</Modal.Title>
                                                 </Modal.Header>
                                                 <Modal.Body>
-                                                    <input type="file" onChange={uploadPic}></input>
+                                                    <Form.Group controlId="formFile" className="mb-3">
+                                                        <Form.Label>Default file input example</Form.Label>
+                                                        <Form.Control type="file" onChange={uploadPic} />
+                                                    </Form.Group>
                                                 </Modal.Body>
                                                 <Modal.Footer>
                                                     <Button variant="secondary" onClick={handleCloseImg}>
