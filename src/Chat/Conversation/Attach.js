@@ -103,7 +103,6 @@ function Attach(props) {
                     trigger="click"
                     overlay={
                         <Popover id={`popover-positioned-top`}>
-                            <Popover.Header as="h3">{`Popover top`}</Popover.Header>
                             <Popover.Body>
                                 <strong>
                                     <ButtonToolbar>
@@ -116,7 +115,7 @@ function Attach(props) {
                                             </Button>
                                             <Modal show={showImg} onHide={handleCloseImg}>
                                                 <Modal.Header closeButton>
-                                                    <Modal.Title>Modal heading</Modal.Title>
+                                                    <Modal.Title>Upload Image</Modal.Title>
                                                 </Modal.Header>
                                                 <Modal.Body>
                                                     <input type="file" onChange={uploadPic}></input>
@@ -139,7 +138,7 @@ function Attach(props) {
                                             </Button>
                                             <Modal show={showVid} onHide={handleCloseVid}>
                                                 <Modal.Header closeButton>
-                                                    <Modal.Title>Modal heading</Modal.Title>
+                                                    <Modal.Title>Upload Video</Modal.Title>
                                                 </Modal.Header>
                                                 <Modal.Body>
                                                     <Form.Group controlId="formFile" className="mb-3">
@@ -164,7 +163,7 @@ function Attach(props) {
                                             </Button>
                                             <Modal show={showAud} onHide={handleCloseAud}>
                                                 <Modal.Header closeButton>
-                                                    <Modal.Title>Modal heading</Modal.Title>
+                                                    <Modal.Title>Start a Record</Modal.Title>
                                                 </Modal.Header>
                                                 <Modal.Body>
                                                     <Form.Group controlId="formFile" className="mb-3">
