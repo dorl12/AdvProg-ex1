@@ -75,7 +75,7 @@
 }
 
 .col-8{
-  background-image: url('/public/backgroundchatlog2.webp');
+  background: url('backgroundchatlog2.webp');
   height: 870px;
   width: 840px;
   background-position: center;

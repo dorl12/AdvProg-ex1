@@ -1,0 +1,10 @@
+.col-8{
+    background: url('/public/backgroundchatlog2.webp');
+    height: 870px;
+    width: 840px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 7px;
+    padding-left: 8px;
+  }

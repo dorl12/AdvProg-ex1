@@ -184,7 +184,7 @@ function Attach(props) {
                 <OverlayTrigger
                     trigger="click"
                     overlay={
-                        <Popover id={`popover-positioned-top`}>    
+                        <Popover id={`popover-positioned-top`}>
                             <Popover.Body>
                                 <strong>
                                     <ButtonToolbar>
@@ -201,7 +201,7 @@ function Attach(props) {
                                                 </Modal.Header>
                                                 <Modal.Body>
                                                     <Form.Group controlId="formFile" className="mb-3">
-                                                        <Form.Control type="file" onChange={uploadPic}/>
+                                                        <Form.Control type="file" onChange={uploadPic} />
                                                     </Form.Group>
                                                 </Modal.Body>
                                                 <Modal.Footer>
@@ -225,7 +225,7 @@ function Attach(props) {
                                                 </Modal.Header>
                                                 <Modal.Body>
                                                     <Form.Group controlId="formFile" className="mb-3">
-                                                        <Form.Control type="file" onChange={uploadVideo}/>
+                                                        <Form.Control type="file" onChange={uploadVideo} />
                                                     </Form.Group>
                                                 </Modal.Body>
                                                 <Modal.Footer>
@@ -280,10 +280,8 @@ function Attach(props) {
                         </Popover>
                     }
                 >
-                    <button className="btn btn-outline-secondary"
-                        type="button" id="button-addon1">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                            fill="currentColor" className="bi bi-paperclip" viewBox="0 0 16 16">
+                    <button type="button" className="btn btn-secondary">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-paperclip" viewBox="0 0 16 16">
                             <path d="M4.5 3a2.5 2.5 0 0 1 5 0v9a1.5 1.5 0 0 1-3 0V5a.5.5 0 0 1 1 0v7a.5.5 0 0 0 1 0V3a1.5 1.5 0 1 0-3 0v9a2.5 2.5 0 0 0 5 0V5a.5.5 0 0 1 1 0v7a3.5 3.5 0 1 1-7 0V3z"></path>
                         </svg>
                     </button>
