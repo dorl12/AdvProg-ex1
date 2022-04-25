@@ -5,11 +5,14 @@ import './LeftSide/LeftSide.js';
 import LeftSide from './LeftSide/LeftSide.js';
 import TopConv from './Conversation/TopConv';
 import ChatLog from './Conversation/ChatLog';
-import { useEffect, useState } from 'react';
-import { contacts, dataBaseChat, data } from './hooks/Storage.js';
+import { useState } from 'react';
+import { contacts , data } from './hooks/Storage.js';
 function ChatBox(props) {
     var indexContacts = contacts.findIndex((user) => { return user.name == props.currentUser });
+    console.log(contacts);
     var indexData = data.findIndex((user) => { return user.name == props.currentUser });
+    console.log('indexcontacts', indexData);
+    console.log('cu', props.currentUser);
 
     const [refresh, setRefresh] = useState(false);
     const [contactList, setContactList] = useState([]);
@@ -28,7 +31,6 @@ function ChatBox(props) {
             setContactList(newContactList);
         }
     }
-
 
     const doSearch = function (query) {
         setContactResult(contactList.filter((contact) => contact.name.includes(query)));

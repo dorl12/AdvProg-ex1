@@ -1,11 +1,11 @@
 .friend-drawer {
-    width: 381px;
+    width: 400px;
     padding: 10px 15px;
     display:inline-flex;
     vertical-align: baseline;
     background: rgb(236, 230, 230);
     transition: .3s ease;
-    border-radius: 7px;
+    border-radius: 9px;
 }
 .text{
     max-width: 35vw;
