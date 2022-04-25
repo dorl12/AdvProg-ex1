@@ -14,6 +14,9 @@ function Register({ registered, setRegister, setCurrentUser }) {
         var nickName = document.getElementById("nickName").value;
         if (validate(userName, password, passValidation, nickName)) {
             if (contacts.findIndex((user) => { return user.name == userName}) === (-1)) {
+                if (image === "") {
+                    image = 'default.jpg'
+                }
                 contacts.push({ name: userName, pass: password, displayName: nickName, img: image });
                 data.push({
                     name: userName,
