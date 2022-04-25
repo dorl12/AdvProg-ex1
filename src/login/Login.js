@@ -46,6 +46,7 @@ function Login({ registered, setCurrentUser }) {
             <div className="screen">
                 {register ? <Register registered={registered} setRegister={setRegister} setCurrentUser={setCurrentUser}></Register> :
                     <div className="content">
+                        <div className="title"><h1>Sign In</h1></div>
                         <form className="form-login">
                             <div className="form-group">
                                 <i className="login_icon fas fa-lock"></i>

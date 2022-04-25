@@ -32,10 +32,16 @@ body {
     height: 100%;
 }
 
+.title {
+    color: #6C63AC;
+    padding-left: 20%;
+    margin-top: 50px;
+    font-size: xx-large;
+}
+
 .form-login {
     width: 320px;
     padding: 30px;
-    padding-top: 156px;
 }
 
 .form-register {
