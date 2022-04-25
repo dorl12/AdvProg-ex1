@@ -6,14 +6,14 @@
 }
 
 .videoMsg {
-    width: 60px;
-    height: 120px;
+    width: 150px;
+    height: 200px;
     display: flex;
     position: relative;
 }
 
 .audioMsg {
-    width: 60px;
+    width: 150px;
     height: 60px;
     display: flex;
     position: relative;

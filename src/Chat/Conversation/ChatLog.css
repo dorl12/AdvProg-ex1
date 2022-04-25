@@ -1,14 +1,13 @@
 .chat-panel{
-    
     color: white;
     width: 830px ;
-    /* height: 680px;
-    overflow-y: auto; */
     overflow-x:hidden;
 }
 #chat-panel {
-    height: 710px;
+    height: 750px;
     overflow-y: auto;
+    flex-direction: column;
+    display: flex;
   }
 
 ::-webkit-scrollbar {
@@ -75,7 +74,13 @@
     border-radius: 7px;
 }
 
-.input-wrapper{
-    background-color: darkgray;
-    margin-top: 10px;
+.col-8{
+  background-image: url('../../../public/backgroundchatlog2.webp');
+  height: 870px;
+  width: 840px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 7px;
+  padding-left: 8px;
 }

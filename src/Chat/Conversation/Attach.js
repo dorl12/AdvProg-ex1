@@ -1,13 +1,11 @@
 import React from 'react';
 import './Attach.css';
-import { dataBaseChat } from '../hooks/Storage.js';
 import { useRef, useState } from 'react';
 import { ButtonGroup, ButtonToolbar, OverlayTrigger } from 'react-bootstrap'
 import { Popover } from 'react-bootstrap'
 import { Button } from 'react-bootstrap'
 import { Modal } from 'react-bootstrap'
 import { Form } from 'react-bootstrap'
-import MsgBubble from './MsgBubble.js'
 
 function Attach(props) {
     //time
@@ -186,8 +184,7 @@ function Attach(props) {
                 <OverlayTrigger
                     trigger="click"
                     overlay={
-                        <Popover id={`popover-positioned-top`}>
-                            <Popover.Header as="h3">{`Popover top`}</Popover.Header>
+                        <Popover id={`popover-positioned-top`}>    
                             <Popover.Body>
                                 <strong>
                                     <ButtonToolbar>
@@ -200,11 +197,10 @@ function Attach(props) {
                                             </Button>
                                             <Modal show={showImg} onHide={handleCloseImg}>
                                                 <Modal.Header closeButton>
-                                                    <Modal.Title>Modal heading</Modal.Title>
+                                                    <Modal.Title>Upload Image</Modal.Title>
                                                 </Modal.Header>
                                                 <Modal.Body>
                                                     <Form.Group controlId="formFile" className="mb-3">
-                                                        <Form.Label>Default file input example</Form.Label>
                                                         <Form.Control type="file" onChange={uploadPic}/>
                                                     </Form.Group>
                                                 </Modal.Body>
@@ -225,11 +221,10 @@ function Attach(props) {
                                             </Button>
                                             <Modal show={showVid} onHide={handleCloseVid}>
                                                 <Modal.Header closeButton>
-                                                    <Modal.Title>Modal heading</Modal.Title>
+                                                    <Modal.Title>Upload Video</Modal.Title>
                                                 </Modal.Header>
                                                 <Modal.Body>
                                                     <Form.Group controlId="formFile" className="mb-3">
-                                                        <Form.Label>Default file input example</Form.Label>
                                                         <Form.Control type="file" onChange={uploadVideo}/>
                                                     </Form.Group>
                                                 </Modal.Body>

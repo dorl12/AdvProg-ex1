@@ -11,7 +11,6 @@ function Search(props) {
         props.doSearch(searchBox.current.value)
     }
 
-
     return (
         <div className="search">
             <span>
