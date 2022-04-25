@@ -201,7 +201,6 @@ function Attach(props) {
                                                 </Modal.Header>
                                                 <Modal.Body>
                                                     <Form.Group controlId="formFile" className="mb-3">
-                                
                                                         <Form.Control type="file" onChange={uploadPic}/>
                                                     </Form.Group>
                                                 </Modal.Body>

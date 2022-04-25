@@ -5,6 +5,7 @@ import { contacts, data } from '../Chat/hooks/Storage.js'
 function Register({ registered, setRegister, setCurrentUser }) {
     let [notes, setNotes] = useState("");
     let [image, setImage] = useState("");
+    let [userState, setUserState] = useState("");
 
     const handle = () => {
         var userName = document.getElementById("username").value;
@@ -12,14 +13,17 @@ function Register({ registered, setRegister, setCurrentUser }) {
         var passValidation = document.getElementById("passwordValidation").value;
         var nickName = document.getElementById("nickName").value;
         if (validate(userName, password, passValidation, nickName)) {
-            contacts.push({ name: userName, pass: password, displayName: nickName, img: image });
-            data.push({
-                name: userName,
-                contacts: [],
-                info: [{sender: '', chat :[]}]});
-            
-            setCurrentUser(userName);   
-            registered(true);
+            if (contacts.findIndex((user) => { return user.name == userName}) === (-1)) {
+                contacts.push({ name: userName, pass: password, displayName: nickName, img: image });
+                data.push({
+                    name: userName,
+                    contacts: [],
+                    info: [{sender: '', chat :[]}]});
+                
+                setCurrentUser(userName);   
+                registered(true);
+            }
+            setUserState("UserName already exist in the system!" );
         }
     }
 
@@ -28,18 +32,18 @@ function Register({ registered, setRegister, setCurrentUser }) {
         let note = '';
         let test = reg.test(userName);
         if (!test) {
-            note += 'invalid username, ';
+            note += 'invalid username! ';
         }
         test = reg.test(password);
         if (!test) {
-            note += 'invalid password, ';
+            note += 'invalid password! ';
         }
         test = reg.test(nickName);
         if (!test) {
-            note += 'invalid nickName, ';
+            note += 'invalid nickName! ';
         }
         if (password !== passValidation) {
-            note += 'password do not match';
+            note += 'password do not match!';
         }
         setNotes(note);
         return (note === '');
@@ -78,6 +82,7 @@ function Register({ registered, setRegister, setCurrentUser }) {
                 </div>
             </div>
             <div className="notes"><p>{notes}</p></div>
+            <p><div className="notes"><p>{userState}</p></div></p>
             <div className="footer">
                 <button type="button" className="submit_button" onClick={handle}>Register</button>
             </div>
