@@ -9,4 +9,4 @@ When logging in, use the username Linda and pass Linda123 - there are 5 contacts
 
 We support uploading videos, images, and recording live
 
-Attached a pdf to describe each componnent, so it is easier to understand how the chat was build.
+Attached a pdf to describe each component, so it is easier to understand how the chat was build.
