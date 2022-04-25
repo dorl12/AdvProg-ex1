@@ -3,8 +3,9 @@
     height: 48px;
 }
 
-.btn-outline-secondary {
-    height: 48px;
+.btn-secondary {
+    height: 40px;
+    margin-top: 4px;
 }
 
 .icon-send {
