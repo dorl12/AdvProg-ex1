@@ -12,3 +12,4 @@ We support uploading videos, images, and recording live
 There is no time stamps on the hardcoded logs, but once you send a new message, the timestamps appear in every messagebubble and in the contact section.
 
 Attached a pdf to describe each componnent, so it is easier to understand how the chat was build.
+
