@@ -11,5 +11,7 @@ We support uploading videos, images, and recording live
 
 There is no time stamps on the hardcoded logs, but once you send a new message, the timestamps appear in every messagebubble and in the contact section.
 
+There is one bug that we couldn't find solution for, you can add contact, and it will apear on the contact list when searching for it, and will remain
+in the contact list.
 Attached a pdf to describe each componnent, so it is easier to understand how the chat was build.
 
